@@ -1,0 +1,1 @@
+window.SITE_CONFIG={social:{scholar:"",orcid:"",github:"https://github.com/ThienP-Nguyen",linkedin:"",cv:""},publications:[]};
