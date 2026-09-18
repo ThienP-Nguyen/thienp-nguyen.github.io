@@ -4,22 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Thien P. Nguyen | Academic Homepage</title>
-  <meta name="description" content="Academic homepage of Thien P. Nguyen — wireless communications researcher.">
+  <meta name="description" content="Academic homepage of Thien P. Nguyen — Wireless Communications Researcher.">
   <link rel="icon" type="image/png" href="./assets/anhthe.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/home.css?v=20260918-1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/home.css?v=20260918-3">
 </head>
 <body>
-  <header class="nav-shell">
+  <header class="site-header">
     <div class="nav-container">
-      <a class="brand" href="index.html" aria-label="Home">
+      <a class="brand" href="index.html">
         <img src="./assets/anhthe.png" alt="Thien P. Nguyen">
-        <span>
-          <strong>Thien P. Nguyen</strong>
-          <small>Academic Homepage</small>
-        </span>
+        <span>Nguyen Phuc Thien</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -28,15 +25,14 @@
         <a href="publications.html">Publications</a>
       </nav>
 
-      <div class="nav-actions">
-        <button class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
-          <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.64 5.64 4.22 4.22m15.56 15.56-1.42-1.42M18.36 5.64l1.42-1.42M4.22 19.78l1.42-1.42M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
-          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 15.1A9 9 0 1 1 8.9 3a7 7 0 0 0 12.1 12.1Z"/></svg>
-        </button>
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle light/dark mode">
+        <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.64 5.64 4.22 4.22m15.56 15.56-1.42-1.42M18.36 5.64l1.42-1.42M4.22 19.78l1.42-1.42M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 15.1A9 9 0 1 1 8.9 3a7 7 0 0 0 12.1 12.1Z"/></svg>
+      </button>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
     <nav class="mobile-nav" aria-label="Mobile navigation">
@@ -47,178 +43,124 @@
   </header>
 
   <main>
-    <section class="hero section-space">
-      <div class="page-container hero-grid">
+    <section class="hero">
+      <img class="hero-bg" src="./assets/thayPhuong.JPG" alt="Graduation photo">
+      <div class="hero-shade"></div>
+      <div class="hero-inner page-width">
         <div class="hero-copy">
-          <div class="eyebrow"><span></span> Wireless Communications · Seoul, Republic of Korea</div>
-          <h1>Thien P. <em>Nguyen</em></h1>
-          <h2>Researching secure, intelligent, and next-generation wireless systems.</h2>
-          <p class="hero-lead">
-            My interests span physical-layer security, reconfigurable intelligent surfaces,
-            satellite communications, energy harvesting, and machine learning for wireless communications.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#research">Explore research</a>
-            <a class="btn secondary" href="publications.html">View publications</a>
-          </div>
-
-          <div class="academic-links" aria-label="Academic links">
-            <a href="#" class="academic-link">
-              <img src="./assets/CV.png" alt="">
-              <span>CV</span>
-            </a>
-            <a href="#" class="academic-link">
-              <img src="./assets/gg.png" alt="">
-              <span>Scholar</span>
-            </a>
-            <a href="#" class="academic-link">
-              <img src="./assets/ORCID.png" alt="">
-              <span>ORCID</span>
-            </a>
-            <a href="mailto:nguyenphucthien999@gmail.com" class="academic-link">
-              <img src="./assets/email.png" alt="">
-              <span>Email</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="image-card">
-            <img src="./assets/thayPhuong.JPG" alt="Graduation photo">
-          </div>
-          <div class="floating-note note-top">
-            <span class="note-dot"></span>
-            <div>
-              <small>Current field</small>
-              <strong>Wireless Communications</strong>
-            </div>
-          </div>
-          <div class="floating-note note-bottom">
-            <small>Research themes</small>
-            <strong>RIS · PLS · Satellite · ML</strong>
+          <p class="eyebrow">Wireless Communications Researcher</p>
+          <h1>Thien P. Nguyen</h1>
+          <p class="hero-role">Secure · Intelligent · Next-generation wireless systems</p>
+          <div class="hero-tags">
+            <span>Physical-Layer Security</span>
+            <span>RIS</span>
+            <span>Satellite</span>
+            <span>Machine Learning</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="research-strip">
-      <div class="page-container strip-grid">
-        <div><span>01</span><strong>Physical-Layer Security</strong></div>
-        <div><span>02</span><strong>RIS &amp; Smart Radio Environments</strong></div>
-        <div><span>03</span><strong>Satellite Communications</strong></div>
-        <div><span>04</span><strong>Machine Learning for Wireless</strong></div>
+    <section class="academic-links-wrap">
+      <div class="academic-links">
+        <a href="#" class="academic-link"><img src="./assets/CV.png" alt=""><span>CV</span></a>
+        <a href="#" class="academic-link"><img src="./assets/gg.png" alt=""><span>Scholar</span></a>
+        <a href="#" class="academic-link"><img src="./assets/ORCID.png" alt=""><span>ORCID</span></a>
+        <a href="mailto:nguyenphucthien999@gmail.com" class="academic-link"><img src="./assets/email.png" alt=""><span>Email</span></a>
       </div>
     </section>
 
-    <section class="section-space about-section">
-      <div class="page-container about-grid">
-        <div class="portrait-card">
-          <img src="./assets/anhthe.png" alt="Portrait of Thien P. Nguyen">
-          <div class="portrait-caption">
-            <strong>Nguyen Phuc Thien</strong>
-            <span>Electronics &amp; Telecommunications Engineering</span>
-          </div>
-        </div>
+    <section class="section-heading">
+      <p class="section-label">PROFILE</p>
+      <h2>Short Bio</h2>
+    </section>
 
-        <div class="about-copy">
-          <div class="section-kicker">About</div>
-          <h2>Research grounded in analytical modeling and practical wireless systems.</h2>
+    <section class="bio-band">
+      <div class="page-width bio-grid">
+        <div class="portrait-wrap">
+          <img src="./assets/anhthe.png" alt="Thien P. Nguyen">
+        </div>
+        <div class="bio-copy">
+          <h3>Nguyen Phuc Thien</h3>
           <p>
-            Nguyen Phuc Thien was born in Dak Nong, Vietnam. He received the B.Sc. degree in
-            Electronics and Telecommunications Engineering from
-            <a href="https://tdtu.edu.vn/" target="_blank" rel="noopener">Ton Duc Thang University</a>,
-            Ho Chi Minh City, Vietnam, in 2025.
+            B.Sc. in Electronics and Telecommunications Engineering from
+            <a href="https://tdtu.edu.vn/" target="_blank" rel="noopener">Ton Duc Thang University</a>.
+            My research focuses on secure and intelligent wireless communication systems.
           </p>
           <p>
-            His research interests include reconfigurable intelligent surfaces (RIS), satellite
-            communications, physical layer security (PLS), energy harvesting (EH), and machine
-            learning (ML) applications for wireless communications. He also serves as the Layout
-            Editor of the <a href="https://advances.vsb.cz/" target="_blank" rel="noopener">Advances in Electrical and Electronic Engineering</a> journal.
+            Current interests include RIS, physical-layer security, satellite communications,
+            energy harvesting, and machine learning for wireless networks.
           </p>
-          <div class="about-meta">
-            <div><span>Focus</span><strong>Wireless Communications</strong></div>
-            <div><span>Methods</span><strong>Analysis · Simulation · Optimization</strong></div>
+
+          <div class="bio-meta">
+            <div><span>Field</span><strong>Wireless Communications</strong></div>
+            <div><span>Methods</span><strong>Analysis · Simulation</strong></div>
             <div><span>Tools</span><strong>MATLAB · Monte Carlo</strong></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-space research-section" id="research">
-      <div class="page-container">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">Research interests</div>
-            <h2>Selected research directions</h2>
-          </div>
-          <p>
-            A compact view of the areas I am currently exploring across future wireless communication systems.
-          </p>
-        </div>
-
-        <div class="research-grid">
-          <article class="research-card">
-            <div class="research-image"><img src="./assets/b1.png" alt="Machine learning and communications"></div>
-            <div class="research-content">
-              <span class="card-index">01</span>
-              <h3>Machine Learning &amp; Communications</h3>
-              <p>Learning-enabled optimization and communication-efficient designs for intelligent wireless systems.</p>
-              <div class="tags"><span>ML</span><span>Federated Learning</span><span>Optimization</span></div>
-            </div>
-          </article>
-
-          <article class="research-card">
-            <div class="research-image"><img src="./assets/b2.png" alt="Satellite communications"></div>
-            <div class="research-content">
-              <span class="card-index">02</span>
-              <h3>Satellite Communications</h3>
-              <p>Performance analysis and secure design for LEO/MEO and non-terrestrial communication systems.</p>
-              <div class="tags"><span>LEO</span><span>NTN</span><span>PLS</span></div>
-            </div>
-          </article>
-
-          <article class="research-card">
-            <div class="research-image"><img src="./assets/b3.png" alt="Reconfigurable intelligent surfaces"></div>
-            <div class="research-content">
-              <span class="card-index">03</span>
-              <h3>Reconfigurable Intelligent Surfaces</h3>
-              <p>RIS-assisted wireless systems, hybrid architectures, and smart radio environments for future networks.</p>
-              <div class="tags"><span>RIS</span><span>ISAC</span><span>FAS</span></div>
-            </div>
-          </article>
-
-          <article class="research-card">
-            <div class="research-image"><img src="./assets/b4.png" alt="Computer vision and image processing"></div>
-            <div class="research-content">
-              <span class="card-index">04</span>
-              <h3>Computer Vision &amp; Image Processing</h3>
-              <p>Visual understanding and digital image processing for interdisciplinary engineering applications.</p>
-              <div class="tags"><span>Vision</span><span>Image Processing</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
+    <section class="section-heading research-heading">
+      <p class="section-label">FOCUS AREAS</p>
+      <h2>Research Interests</h2>
     </section>
 
-    <section class="section-space closing-section">
-      <div class="page-container closing-card">
-        <div>
-          <div class="section-kicker">Research &amp; collaboration</div>
-          <h2>Interested in discussing wireless communications research?</h2>
+    <section class="research-list page-width">
+      <article class="research-row">
+        <div class="research-visual">
+          <img src="./assets/b1.png" alt="Machine learning and communications">
         </div>
-        <a class="btn primary" href="mailto:nguyenphucthien999@gmail.com">Get in touch</a>
-      </div>
+        <div class="research-text">
+          <span class="number">01</span>
+          <h3>Machine Learning &amp; Communications</h3>
+          <p>Learning-enabled optimization and efficient wireless intelligence.</p>
+          <div class="tags"><span>ML</span><span>Federated Learning</span><span>Optimization</span></div>
+        </div>
+      </article>
+
+      <article class="research-row">
+        <div class="research-visual">
+          <img src="./assets/b2.png" alt="Satellite communications">
+        </div>
+        <div class="research-text">
+          <span class="number">02</span>
+          <h3>Satellite Communications</h3>
+          <p>Reliable and secure performance analysis for LEO/MEO and NTN systems.</p>
+          <div class="tags"><span>LEO</span><span>NTN</span><span>PLS</span></div>
+        </div>
+      </article>
+
+      <article class="research-row">
+        <div class="research-visual">
+          <img src="./assets/b3.png" alt="Reconfigurable intelligent surfaces">
+        </div>
+        <div class="research-text">
+          <span class="number">03</span>
+          <h3>Reconfigurable Intelligent Surfaces</h3>
+          <p>Smart radio environments for coverage, reliability, and secure transmission.</p>
+          <div class="tags"><span>RIS</span><span>ISAC</span><span>FAS</span></div>
+        </div>
+      </article>
+
+      <article class="research-row">
+        <div class="research-visual">
+          <img src="./assets/b4.png" alt="Image processing">
+        </div>
+        <div class="research-text">
+          <span class="number">04</span>
+          <h3>Other Topics</h3>
+          <p>Computer vision and digital image processing for engineering applications.</p>
+          <div class="tags"><span>Vision</span><span>Image Processing</span></div>
+        </div>
+      </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="page-container footer-grid">
+    <div class="page-width footer-inner">
+      <p>Department of Electrical and Information Engineering · Seoul National University of Science and Technology</p>
       <div>
-        <strong>Thien P. Nguyen</strong>
-        <p>Electrical &amp; Information Engineering · Seoul, Republic of Korea</p>
-      </div>
-      <div class="footer-links">
         <a href="projects.html">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="mailto:nguyenphucthien999@gmail.com">Email</a>
@@ -226,6 +168,6 @@
     </div>
   </footer>
 
-  <script src="./assets/js/main.js?v=20260918-2"></script>
+  <script src="./assets/js/main.js?v=20260918-3"></script>
 </body>
 </html>
