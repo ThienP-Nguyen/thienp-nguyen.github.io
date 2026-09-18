@@ -1,108 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Nguyen Phuc Thien</title>
-<meta name="description" content="Personal academic website of Nguyen Phuc Thien.">
+<meta name="description" content="Academic homepage of Nguyen Phuc Thien.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-<header class="gs-header">
-  <a class="gs-brand" href="index.html">
-    <img src="assets/img/9.JPG">
-    <span>Nguyen Phuc Thien</span>
+<body class="home-body">
+<div class="topline"></div>
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="assets/img/9.JPG" alt="Nguyen Phuc Thien" class="brand-thumb">
+    <span class="brand-name">Nguyen Phuc Thien</span>
   </a>
-  <button class="gs-menu-button" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
-  <nav class="gs-nav">
-    <a class="selected" href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+
+  <nav class="main-nav">
+    <a class="active" href="index.html">Home</a><span class="sep">·</span>
+    <a href="projects.html">Projects</a><span class="sep">·</span>
     <a href="publications.html">Publications</a>
+    <span class="search-icon">⌕</span>
   </nav>
+
+  <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
+    <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.64 5.64 4.22 4.22m15.56 15.56-1.42-1.42M18.36 5.64l1.42-1.42M4.22 19.78l1.42-1.42M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
+    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 15.1A9 9 0 1 1 8.9 3a7 7 0 0 0 12.1 12.1Z"/></svg>
+  </button>
 </header>
 
 <main>
-<section class="gs-intro gs-width">
-  <h1>Thien P. Nguyen</h1>
-  <p>Recent graduate in Electronics and Telecommunications Engineering,<br>Ton Duc Thang University, Vietnam</p>
-  <div class="gs-link-icons">
-    <a href="#" aria-label="Google Scholar"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d2pPpX_9WGAEMQ125lOmj76aOun8IgYlOz0rLBGD83jhbMnYYUEZ0mUTAXaDwG40qPUfl6zfcamTK31ZhXJgSNoYEKewpBQd0Bts291g3aCz2W5hx3I-yQtVTyLypNPL_w4o6xtTKlDX7s3lh6cwuRjTijO8Wubv75nYiKDteeIM_Rn8RpjxTRpEOWBQIOLqZPEEw" alt="Google Scholar"></a>
-    <a href="#" aria-label="ORCID"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d2q5cGZWowogldHwBAsO3XhuBAKF2VD5RezARq7h1xpckzlFJI-b4ZuL4-TKCJJLWT1Jx2v8eXawiTNWCcS5rs0fDCl3zjTuix08SUyOSh-zqZTuOUnvm4TMzKQlH1hfOLggtxZYVwH9DJYDPqNXhzEUlJBU5xNCNmE8NKYT0qXshAGyDzrhPKGQOxqq_gmzCiXIqd-" alt="ORCID"></a>
-    <a href="#" aria-label="CV"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d3PzR90X5hTLZ9szPtJ4avAgTxGZkrjBksFJM89Mdagpbj9jFIHVqzPaNkj4D1dNiZopAO1KASQXOTYTBcnY3fGft8WIg5nyWyOvlF-4Z_S2j4YQsLUm06Bl8761B7d_4R63fo37bNgR1dYxQ7n9h_q6M5w7ql21Fk6NTtXl5LXdH-rujzhLnaGzlLX6dyqecnRgw" alt="CV"></a>
-    <a href="mailto:nguyenphucthien999@gmail.com" aria-label="Email"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d20amKmvMg1ql0g6u40zb6_VeuzjnJduSi7NBtdJsEpVcH7qAwh6b1j-QL9LQKnQtfdHInyoXA6UyTHH7h04txKhFcPj_nfLoltjE2No6KCCyhScVxz6BijWshEhSGC0oWZe7s1tJBQ1lNi5HNd-HTXWht78BKLp2nFLFGpmkiT12KDwqrvCw-rlrocia0FbKc93g" alt="Email"></a>
+<section class="hero-home">
+  <img src="assets/img/9.JPG" alt="Graduation portrait" class="hero-bg">
+  <div class="hero-copy">
+    <h1>Thien P. Nguyen</h1>
+    <p>Recent graduate in Electronics and<br>Telecommunications Engineering,<br>Ton Duc Thang University, Vietnam</p>
   </div>
 </section>
 
-<section class="gs-section">
-  <div class="gs-width">
-    <h2>SHORT BIO</h2>
-    <div class="bio-layout">
-      <div class="bio-image-wrap"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d1a_fxhKScFxWXOuUaSm5vJp0C2y-G_pxXP9nbwWhF_rumsQTqNZfph2SkFSNy6lrCNoqFK1A4YM2kFhrgZ2G-qBIEK75ND_d9_A7RfPcW8uoBbr4EIrgP296wl3bgJcZzfajCPDlEyr8X2Up8srarurY3NA3voh87icFr9WGm94AhXwZRG_xkFhgbrpgKbD8_xkY972tndkczGlkDRPef5lR-qCn_29vbvjjLvf-k=w1280" alt="Nguyen Phuc Thien"></div>
-      <div class="bio-copy">
-        <p><strong>Nguyen Phuc Thien</strong> was born in Dak Nong, Vietnam. He received the B.Sc. degree in Electronics and Telecommunications Engineering from <a href="https://tdtu.edu.vn/" target="_blank" rel="noopener">Ton Duc Thang University</a>, Ho Chi Minh City, Vietnam, in 2025. He is currently a Researcher with the <a href="https://feee.tdtu.edu.vn/" target="_blank" rel="noopener">Wireless Communications Research Group</a>, Ton Duc Thang University, Vietnam.</p>
-        <p>His research interests include reconfigurable intelligent surfaces (RIS), satellite communications, physical layer security (PLS), energy harvesting (EH), and machine learning (ML) applications for wireless communications. He also serves as the Layout Editor of the <a href="https://advances.vsb.cz/" target="_blank" rel="noopener">Advances in Electrical and Electronic Engineering journal</a>. He has published several papers as both first author and co-author in international journals and conferences.</p>
-      </div>
-    </div>
+<section class="icon-band">
+  <div class="icon-row">
+    <a href="#" aria-label="CV"><img src="assets/img/CV.png" alt="CV"></a>
+    <a href="#" aria-label="Google Scholar"><img src="assets/img/gg.png" alt="Google Scholar"></a>
+    <a href="#" aria-label="ORCID"><img src="assets/img/ORCID.png" alt="ORCID"></a>
+    <a href="mailto:nguyenphucthien999@gmail.com" aria-label="Email"><img src="assets/img/e-mail-protection-concept-illustration_118124-2310 (1).png" alt="Email"></a>
   </div>
 </section>
 
-<section class="gs-section interests">
-  <div class="gs-width">
-    <h2>RESEARCH INTERESTS</h2>
+<section class="section-title white-gap"><h2>🤖 SHORT BIO</h2></section>
 
-    <div class="interest-layout">
-      <div class="interest-image"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d2fir5S2B6zdCY4EAXti5H6n9IsNjPDENhD7z904hgTdZYK3dIW-78ioBA5RxnB28pNi4KGMD8kHqUqowFo6UCAgZ7JbC7bV6sntBQtSkt2nFg89lboECb-W0fjTbbuhHbM2Ca4roU1bin4fFvNxEhmUw_uBOhQsRC7Ak_nQF5pp67-PHJ8bad7omk7xzx-IOZN0807smeMcCwGltOx2OsL_jbpHCyRC6Ig7qDnTwA=w1280" alt=""></div>
-      <div class="interest-copy">
-        <h3>Machine Learning &amp; Communications</h3>
-        <ul>
-          <li>Intelligent wireless communications empowered by machine learning and data-driven optimization.</li>
-          <li>Communication-efficient and robust designs for federated learning over wireless networks.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="interest-layout">
-      <div class="interest-image"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d3xfERuIpMcjdntizHF_q4MLr6j5NWCznmS_ks_M8u12yrvJoPjYCFgTc7rWcE9TmuNWKP8KaBz7of8fheT4dHfr_JkZq32KutsfX1zzdUvcptPc1rWhv4vVaZ0LMCymze8xxSHg0g9yKN-d-SVKIMZM4Bm84fXvQ61IbBEc_4H5Ub9KZFI-xwcN2atDN9GXle6OS0MpOm374V8wVNJnUrSbsM5ii4F3StfCG524lc=w1280" alt=""></div>
-      <div class="interest-copy">
-        <h3>Satellite Communications</h3>
-        <ul>
-          <li>Analytical modeling and performance evaluation of next-generation LEO/MEO satellite systems.</li>
-          <li>Secure and reliable satellite communications with emphasis on physical layer security.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="interest-layout">
-      <div class="interest-image"><img src="https://sites.google.com/sitesv-images-rt/ACHe0d0LGzrg5OulPBi5c6JZhvqNkCNPw0Yk8hU8P_8CLefPJShqF4rC_epuyLdJOLMfqafsUE6EsuqXKPRou3RILaXtalRT1AFXLSKdPhGjTBtjjhlNFz5y-9L3NdMzHTpk3F_CCGdvWyjCe2NFiFDQ5u1V91RNi-Lt5D6t7Cu69vbXAhHtCOuhIsRokOAYjjYxx01be3mtFa_bWPpuDiWL88L5IEYnLbX1wS3IUTenNPI=w1280" alt=""></div>
-      <div class="interest-copy">
-        <h3>Reconfigurable Intelligent Surfaces (RIS)</h3>
-        <ul>
-          <li>Reconfigurable Intelligent Surfaces for Integrated Sensing and Communication (RIS-ISAC)</li>
-          <li>Hybrid Reconfigurable Intelligent Surfaces (Hybrid RIS)</li>
-          <li>FAS + RIS</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="interest-layout text-row">
-      <div></div>
-      <div class="interest-copy">
-        <h3>Other Topics</h3>
-        <ul>
-          <li>Computer vision and intelligent visual understanding.</li>
-          <li>Digital image processing for interdisciplinary engineering applications.</li>
-        </ul>
-      </div>
+<section class="bio-panel">
+  <div class="bio-grid">
+    <div><img src="assets/img/profile.webp" alt="Nguyen Phuc Thien" class="bio-photo"></div>
+    <div class="bio-text">
+      <p>Nguyen Phuc Thien was born in Dak Nong, Vietnam. He received the B.Sc. degree in Electronics and Telecommunications Engineering from <a href="https://tdtu.edu.vn/" target="_blank" rel="noopener">Ton Duc Thang University</a>, Ho Chi Minh City, Vietnam, in 2025. He is currently a Researcher with the <a href="https://feee.tdtu.edu.vn/" target="_blank" rel="noopener">Wireless Communications Research Group</a>, Ton Duc Thang University, Vietnam.</p>
+      <p>His research interests include reconfigurable intelligent surfaces (RIS), satellite communications, physical layer security (PLS), energy harvesting (EH), and machine learning (ML) applications for wireless communications. He also serves as the Layout Editor of the <a href="https://advances.vsb.cz/" target="_blank" rel="noopener">Advances in Electrical and Electronic Engineering journal</a>. He has published several papers as both first author and co-author in international journals and conferences.</p>
     </div>
   </div>
 </section>
 
-<section class="gs-footer-band">
-  <div class="gs-width">Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul, Republic of Korea</div>
+<section class="section-title interest-title"><h2>🌟 RESEARCH INTERESTS</h2></section>
+
+<section class="interest-section">
+  <div class="interest-row">
+    <div class="interest-image"><img src="assets/img/fig20.png" alt="Federated Learning"></div>
+    <div class="interest-copy"><h3>Machine Learning &amp; Communications</h3><ul><li>Intelligent wireless communications empowered by machine learning and data-driven optimization.</li><li>Communication-efficient and robust designs for federated learning over wireless networks.</li></ul></div>
+  </div>
+  <div class="interest-row">
+    <div class="interest-image"><img src="assets/img/N1.png" alt="Satellite Communications"></div>
+    <div class="interest-copy"><h3>Satellite Communications</h3><ul><li>Analytical modeling and performance evaluation of next-generation LEO/MEO satellite systems.</li><li>Secure and reliable satellite communications with emphasis on physical layer security.</li></ul></div>
+  </div>
+  <div class="interest-row">
+    <div class="interest-image"><img src="assets/img/MinhHan2.png" alt="RIS"></div>
+    <div class="interest-copy"><h3>Reconfigurable Intelligent Surfaces (RIS)</h3><ul><li>Reconfigurable Intelligent Surfaces for Integrated Sensing and Communication (RIS-ISAC)</li><li>Hybrid Reconfigurable Intelligent Surfaces (Hybrid RIS)</li><li>FAS + RIS</li></ul></div>
+  </div>
+  <div class="interest-row">
+    <div class="interest-image"><img src="assets/img/fig12.png" alt="Other Topics"><div class="dots"><span class="active"></span><span></span></div></div>
+    <div class="interest-copy"><h3>Other Topics</h3><ul><li>Computer vision and intelligent visual understanding.</li><li>Digital image processing for interdisciplinary engineering applications.</li></ul></div>
+  </div>
 </section>
 </main>
-<script>
-document.querySelectorAll('.gs-nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
-</script>
+
+<footer class="site-footer-home"><p>Department of Electrical and Information Engineering, Seoul National University of Science and Technology, Seoul, Republic of Korea</p></footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
