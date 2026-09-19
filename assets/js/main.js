@@ -29,3 +29,21 @@ mobileNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=
   mobileNav.classList.remove('open');
   menuToggle?.setAttribute('aria-expanded','false');
 }));
+
+// publication filters
+const pubFilterButtons=document.querySelectorAll('.pub-filter');
+const pubCards=document.querySelectorAll('.pub-card[data-type]');
+const pubYearGroups=document.querySelectorAll('.pub-year-group');
+if(pubFilterButtons.length&&pubCards.length){
+  pubFilterButtons.forEach(btn=>btn.addEventListener('click',()=>{
+    const filter=btn.dataset.filter;
+    pubFilterButtons.forEach(b=>b.classList.toggle('active',b===btn));
+    pubCards.forEach(card=>{
+      card.hidden=filter!=='all'&&card.dataset.type!==filter;
+    });
+    pubYearGroups.forEach(group=>{
+      const visible=[...group.querySelectorAll('.pub-card[data-type]')].some(card=>!card.hidden);
+      group.hidden=!visible;
+    });
+  }));
+}
