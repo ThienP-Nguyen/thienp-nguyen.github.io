@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/css/styles.css?v=20260919-pub3">
+<link rel="stylesheet" href="./assets/css/styles.css?v=20260919-pub4">
 </head>
 <body>
 <header class="site-header">
@@ -34,8 +34,23 @@
 
 <main class="page-width publications-page">
   <section class="pub-hero">
-    <div class="pub-hero-copy">
-      <h1>Publications</h1>
+    <div class="pub-hero-left">
+      <h1>PUBLICATIONS</h1>
+
+      <div class="pub-overview compact-overview" aria-label="Publication statistics">
+        <div class="overview-stat">
+          <strong>11</strong>
+          <span>Total publications</span>
+        </div>
+        <div class="overview-stat">
+          <strong>6</strong>
+          <span>Journal papers</span>
+        </div>
+        <div class="overview-stat">
+          <strong>5</strong>
+          <span>Conference papers</span>
+        </div>
+      </div>
     </div>
 
     <aside class="scholar-analytics" aria-label="Google Scholar metrics">
@@ -56,44 +71,36 @@
       <div class="scholar-chart-wrap">
         <div class="chart-title">Citations by year</div>
         <div class="scholar-chart" role="img" aria-label="Google Scholar citations by year: 1 in 2025 and 15 in 2026">
-          <div class="chart-y-label y16">16</div>
-          <div class="chart-y-label y8">8</div>
-          <div class="chart-y-label y0">0</div>
-          <div class="chart-grid grid-top"></div>
-          <div class="chart-grid grid-mid"></div>
-          <div class="chart-grid grid-bottom"></div>
-          <div class="bar-item bar-2025">
-            <div class="bar-value">1</div>
-            <div class="bar" style="--bar-height:6.25%"></div>
-            <span>2025</span>
+          <div class="plot-area">
+            <div class="plot-grid plot-grid-top"></div>
+            <div class="plot-grid plot-grid-mid"></div>
+            <div class="plot-grid plot-grid-bottom"></div>
+
+            <div class="chart-column">
+              <div class="bar-stage">
+                <span class="bar-number" style="--h:6.25%">1</span>
+                <div class="citation-bar" style="--h:6.25%"></div>
+              </div>
+              <span class="year-label">2025</span>
+            </div>
+
+            <div class="chart-column">
+              <div class="bar-stage">
+                <span class="bar-number" style="--h:93.75%">15</span>
+                <div class="citation-bar" style="--h:93.75%"></div>
+              </div>
+              <span class="year-label">2026</span>
+            </div>
           </div>
-          <div class="bar-item bar-2026">
-            <div class="bar-value">15</div>
-            <div class="bar" style="--bar-height:93.75%"></div>
-            <span>2026</span>
+
+          <div class="chart-scale">
+            <span>16</span>
+            <span>8</span>
+            <span>0</span>
           </div>
         </div>
       </div>
     </aside>
-  </section>
-
-  <section class="pub-overview" aria-label="Publication statistics">
-    <div class="overview-stat">
-      <strong>11</strong>
-      <span>Total publications</span>
-    </div>
-    <div class="overview-stat">
-      <strong>6</strong>
-      <span>Journal papers</span>
-    </div>
-    <div class="overview-stat">
-      <strong>5</strong>
-      <span>Conference papers</span>
-    </div>
-    <div class="overview-stat citation-stat">
-      <strong>16</strong>
-      <span>Total citations</span>
-    </div>
   </section>
 
   <div class="pub-toolbar">
