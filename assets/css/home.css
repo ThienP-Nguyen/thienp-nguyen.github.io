@@ -10,7 +10,9 @@
   --green:#26a269;
   --shadow:0 18px 50px rgba(31,68,110,.10);
   --card-shadow:0 12px 34px rgba(31,68,110,.08);
-  --card-shadow-hover:0 24px 54px rgba(31,68,110,.16);\n  --warm:#a54f3b;\n  --warm-soft:#fbf0ec;
+  --card-shadow-hover:0 24px 54px rgba(31,68,110,.16);
+  --warm:#a54f3b;
+  --warm-soft:#fbf0ec;
   --width:1180px;
 }
 *{box-sizing:border-box}
@@ -403,11 +405,11 @@ body.dark-mode .research-visual{background:#f7f9fb}
 .section-heading{padding:76px 20px 40px;text-align:center}
 .research-title h2{
   margin:0;
-  color:var(--text);
+  color:var(--blue);
   font-size:clamp(29px,3.25vw,42px);
-  letter-spacing:.055em;
+  letter-spacing:.035em;
   line-height:1.15;
-  font-weight:600;
+  font-weight:700;
 }
 
 .research-list{
@@ -657,4 +659,67 @@ body.dark-mode .research-visual{background:#f7f9fb}
 @media(max-width:460px){
   .research-title h2{font-size:24px;letter-spacing:.035em}
   .research-visual{height:215px}
+}
+
+
+/* v7 milestone ordering + research heading refinement */
+.journey-head h2{
+  font-weight:650;
+}
+.journey-track{
+  gap:18px;
+}
+.milestone-date{
+  white-space:nowrap;
+  font-size:9.5px;
+}
+.milestone h3{
+  font-size:13.5px;
+}
+.milestone p{
+  font-size:9.8px;
+}
+.milestone-dot{
+  background:#8a929a;
+}
+.milestone.education .milestone-dot{
+  background:#3569ae;
+}
+.milestone.research .milestone-dot{
+  background:#2e8b74;
+}
+.milestone.industry .milestone-dot{
+  background:#c47b32;
+}
+.milestone.publishing .milestone-dot{
+  background:#8b67a8;
+}
+.milestone.current .milestone-dot{
+  background:var(--warm);
+}
+.milestone:hover .milestone-dot{
+  background:var(--warm);
+}
+.milestone-chip,.milestone-chips span{
+  font-size:8.3px;
+}
+.milestone.current h3{
+  color:var(--blue);
+}
+.milestone.current .milestone-date{
+  color:var(--blue);
+}
+body.dark-mode .research-title h2{
+  color:var(--blue);
+}
+@media(max-width:1200px){
+  .journey-track{
+    gap:14px;
+  }
+  .milestone h3{
+    font-size:12.5px;
+  }
+  .milestone p{
+    font-size:9.3px;
+  }
 }
