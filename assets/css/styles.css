@@ -639,3 +639,186 @@ body.dark-mode .bar{
   .scholar-metrics strong{font-size:21px}
   .scholar-chart{height:140px}
 }
+
+
+/* Publications v4 — balanced hero + corrected Scholar chart */
+.pub-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 470px;
+  gap:54px;
+  align-items:stretch;
+  padding:58px 0 30px;
+}
+.pub-hero-left{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:430px;
+}
+.pub-hero-left h1{
+  margin:0 0 34px;
+  color:var(--blue);
+  font-size:clamp(29px,3.25vw,42px);
+  line-height:1.15;
+  letter-spacing:.035em;
+  font-weight:700;
+}
+.compact-overview{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  width:min(100%,650px);
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:var(--surface);
+  overflow:hidden;
+  box-shadow:0 10px 28px rgba(31,68,110,.055);
+}
+.compact-overview .overview-stat{
+  min-height:108px;
+  padding:19px 21px;
+}
+.compact-overview .overview-stat strong{
+  font-size:30px;
+}
+.compact-overview .overview-stat span{
+  font-size:9.5px;
+}
+
+.scholar-analytics{
+  min-height:430px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.scholar-chart-wrap{
+  margin-top:auto;
+}
+.scholar-chart{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 28px;
+  gap:8px;
+  height:174px;
+  padding:0;
+}
+.plot-area{
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+  gap:28px;
+  height:154px;
+  padding:0 18px 22px 16px;
+}
+.plot-grid{
+  position:absolute;
+  left:0;
+  right:0;
+  height:1px;
+  background:var(--line);
+  z-index:0;
+}
+.plot-grid-top{top:4px}
+.plot-grid-mid{top:63px}
+.plot-grid-bottom{bottom:22px}
+.chart-column{
+  position:relative;
+  z-index:2;
+  width:48px;
+  height:132px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:center;
+}
+.bar-stage{
+  position:relative;
+  width:100%;
+  height:108px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.citation-bar{
+  width:26px;
+  height:var(--h);
+  min-height:6px;
+  border-radius:6px 6px 2px 2px;
+  background:linear-gradient(180deg,#4d6fa9,#7c91b5);
+  box-shadow:0 5px 12px rgba(31,87,166,.10);
+}
+.bar-number{
+  position:absolute;
+  bottom:calc(var(--h) + 5px);
+  left:50%;
+  transform:translateX(-50%);
+  color:var(--text);
+  font-size:8.5px;
+  font-weight:750;
+}
+.year-label{
+  display:block;
+  height:22px;
+  padding-top:6px;
+  color:var(--muted);
+  font-size:8.5px;
+  line-height:1;
+}
+.chart-scale{
+  height:132px;
+  padding:0 0 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:8px;
+  text-align:right;
+}
+.chart-scale span{
+  display:block;
+  line-height:1;
+}
+
+/* Toolbar pulled closer to the hero */
+.pub-toolbar{
+  padding:22px 0 8px;
+}
+
+/* Old v3 chart primitives no longer participate */
+.chart-y-label,
+.chart-grid,
+.bar-item{display:none!important}
+
+@media(max-width:1000px){
+  .pub-hero{
+    grid-template-columns:1fr;
+    gap:26px;
+    padding-top:46px;
+  }
+  .pub-hero-left{
+    min-height:0;
+  }
+  .pub-hero-left h1{
+    margin-bottom:24px;
+  }
+  .scholar-analytics{
+    min-height:0;
+    max-width:none;
+  }
+}
+@media(max-width:620px){
+  .compact-overview{
+    grid-template-columns:1fr;
+  }
+  .compact-overview .overview-stat{
+    min-height:76px;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  .compact-overview .overview-stat:last-child{
+    border-bottom:0;
+  }
+  .plot-area{
+    gap:18px;
+    padding-right:10px;
+  }
+}
