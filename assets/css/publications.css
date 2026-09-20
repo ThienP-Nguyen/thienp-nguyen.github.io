@@ -571,3 +571,82 @@ body.dark-mode .pub-meta-line .pub-venue{
     gap:12px;
   }
 }
+
+
+/* v2 — fix Scholar chart y-axis geometry */
+.scholar-chart{
+  grid-template-columns:minmax(0,1fr) 24px;
+  gap:8px;
+  height:112px;
+}
+.plot-area{
+  --plot-h:72px;
+  position:relative;
+  height:96px;
+  padding:0 12px 24px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:flex-start;
+  gap:18px;
+}
+.plot-grid{
+  position:absolute;
+  left:4px;
+  right:4px;
+  height:1px;
+  background:var(--line);
+  z-index:0;
+}
+.plot-grid-top{top:0}
+.plot-grid-mid{top:calc(var(--plot-h) / 2)}
+.plot-grid-bottom{
+  display:block;
+  top:var(--plot-h);
+}
+.chart-column{
+  position:relative;
+  width:38px;
+  height:96px;
+  display:grid;
+  grid-template-rows:var(--plot-h) 24px;
+  align-items:end;
+  justify-items:center;
+  z-index:2;
+}
+.bar-stage{
+  position:relative;
+  width:100%;
+  height:var(--plot-h);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.citation-bar{
+  width:18px;
+  height:var(--h);
+  min-height:4px;
+  margin:0;
+}
+.bar-number{
+  bottom:calc(var(--h) + 4px);
+  font-size:7.5px;
+}
+.year-label{
+  height:24px;
+  padding-top:7px;
+  font-size:7.5px;
+  line-height:1;
+}
+.chart-scale{
+  height:96px;
+  padding:0 0 24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:7px;
+  text-align:right;
+}
+.chart-scale span{
+  line-height:1;
+}
