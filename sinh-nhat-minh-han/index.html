@@ -84,8 +84,41 @@ dialog{border:0;padding:0;width:min(730px,calc(100% - 28px));max-height:89dvh;bo
 @media(max-width:600px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:430px 250px 310px;gap:12px}.p1{grid-column:1/3;grid-row:1}.p2{grid-row:2;grid-column:1}.p3{grid-row:2;grid-column:2}.p4{grid-column:1/3;grid-row:3}.photo .cap{left:14px;bottom:16px}.cap div{font-size:19px}.p1 img{object-position:50% 45%}.hero-art{height:460px}.hero-photo{aspect-ratio:4/5}.birthday-wish{padding:65px 20px}.js .reveal:not(.show){transform:translateY(16px)}}
 @media(prefers-reduced-motion:reduce){.js .reveal:not(.show){opacity:1;transform:none}}
 </style>
+<link rel="stylesheet" href="intro.css?v=2">
+<script>document.documentElement.classList.add('intro-pending');</script>
 </head>
 <body>
+<section id="loveIntro" class="love-intro" role="dialog" aria-modal="true" aria-label="Món quà sinh nhật gửi Minh Hân" hidden>
+  <div class="intro-glow glow-one" aria-hidden="true"></div><div class="intro-glow glow-two" aria-hidden="true"></div>
+  <div class="intro-petals" aria-hidden="true"></div>
+  <div class="intro-top"><span class="intro-monogram">T <i>♡</i> H</span><span class="intro-postmark">MỘT MÓN QUÀ TỪ HÀN QUỐC</span><button id="skipIntro" class="intro-skip" type="button">Vào trang ngay <span aria-hidden="true">↗</span></button></div>
+  <div class="intro-content">
+    <div id="introLoading" class="intro-loading">
+      <p class="intro-overline">ĐANG GÓI GHÉM YÊU THƯƠNG</p>
+      <div class="heart-loader" role="progressbar" aria-label="Gói ghém yêu thương" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span class="heart-orbit" aria-hidden="true"></span><span class="heart-spark spark-a" aria-hidden="true">✧</span><span class="heart-spark spark-b" aria-hidden="true">✦</span>
+        <svg class="filling-heart" viewBox="0 0 200 190" aria-hidden="true">
+          <defs><clipPath id="loveHeartClip"><path d="M100 172C83 158 18 115 18 65C18 17 75 6 100 47C125 6 182 17 182 65C182 115 117 158 100 172Z"/></clipPath><linearGradient id="loveHeartPink" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#f79db6"/><stop offset="1" stop-color="#b43968"/></linearGradient></defs>
+          <path d="M100 172C83 158 18 115 18 65C18 17 75 6 100 47C125 6 182 17 182 65C182 115 117 158 100 172Z" fill="#f9e1e9" stroke="#d393a9" stroke-width="1.5"/>
+          <g clip-path="url(#loveHeartClip)"><g id="heartLiquid" transform="translate(0 185)"><path class="heart-wave" d="M-200 0Q-175 -10 -150 0T-100 0T-50 0T0 0T50 0T100 0T150 0T200 0T250 0T300 0T350 0T400 0V210H-200Z" fill="url(#loveHeartPink)"/><path d="M-200 4Q-175 -4 -150 4T-100 4T-50 4T0 4T50 4T100 4T150 4T200 4T250 4T300 4V210H-200Z" fill="#e46f9a" opacity=".2"/></g><ellipse cx="55" cy="60" rx="9" ry="17" fill="white" opacity=".35" transform="rotate(35 55 60)"/></g>
+        </svg><span class="heart-percent" id="heartPercent" aria-hidden="true">0<span>%</span></span>
+      </div>
+      <h1 class="intro-loading-title">Một chút chờ đợi,<br><em>thật nhiều thương em.</em></h1>
+      <p class="intro-loading-note" id="loadingNote">Anh đang gom những điều dịu dàng nhất…</p>
+      <div class="intro-meter" aria-hidden="true"><span id="introMeter"></span></div>
+      <p class="intro-loading-foot">Dành riêng cho Vợ Cún yêu ♡</p>
+    </div>
+    <div id="introStory" class="intro-story" hidden>
+      <div class="story-emblem" aria-hidden="true">♡</div>
+      <div class="story-copy" id="storyCopy" aria-live="polite" aria-atomic="true"><p class="intro-overline" id="storyOverline"></p><h2 id="storyTitle" tabindex="-1"></h2><p id="storyText"></p><p id="storyAside"></p></div>
+      <div class="story-memories" aria-hidden="true"><span class="mini-photo mini-left"><img src="assets/anh/memory-3.webp" alt=""><i>you & me</i></span><span class="memory-thread">· · · ♡ · · ·</span><span class="mini-photo mini-right"><img src="assets/anh/memory-4.webp" alt=""><i>always, us</i></span></div>
+      <div class="story-controls"><div class="story-dots" aria-label="Tiến trình lời nhắn"><span></span><span></span><span></span><span></span></div><button id="nextIntro" class="intro-next" type="button">Nghe anh nói tiếp <span aria-hidden="true">→</span></button><button id="pauseIntro" class="intro-pause" type="button" aria-pressed="false">Tạm dừng lời nhắn</button></div>
+    </div>
+  </div>
+  <div class="intro-bottom"><span>SEOUL <i>· · · ♡ · · ·</i> BÊN EM</span><span>29.09.2026</span></div>
+</section>
+<div id="birthdaySite">
+
 <div class="aurora" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div><canvas id="fx" aria-hidden="true"></canvas>
 <header class="wrap">
   <a class="brand" href="#">Hân ♡ <small>birthday edition</small></a>
@@ -169,7 +202,7 @@ dialog{border:0;padding:0;width:min(730px,calc(100% - 28px));max-height:89dvh;bo
 </section>
 </main>
 
-<footer class="wrap"><span>FOR VỢ CÚN YÊU ♡</span><span>Made with ♥ by Chó Béo</span><a href="#">Về đầu trang ↑</a></footer>
+<footer class="wrap"><button class="replay-intro" id="replayIntro" type="button" hidden>♡ Xem lại lời mở đầu</button><span>FOR VỢ CÚN YÊU ♡</span><span>Made with ♥ by Chó Béo</span><a href="#">Về đầu trang ↑</a></footer>
 
 <dialog id="photoDialog" aria-label="Album kỷ niệm"><div class="dialog-top"><span class="photo-count" id="photoCount"></span><button class="close" id="closePhoto" aria-label="Đóng ảnh">✕</button></div><img id="largePhoto" alt=""><div class="viewer-bottom"><button id="prevPhoto" aria-label="Ảnh trước">←</button><span id="photoCaption"></span><button id="nextPhoto" aria-label="Ảnh tiếp theo">→</button></div></dialog>
 <dialog id="letterDialog" aria-label="Lá thư sinh nhật gửi Minh Hân">
@@ -220,5 +253,8 @@ photoDlg.addEventListener('close',()=>{document.body.classList.remove('modal-ope
 let wished=false;const wishBtn=document.getElementById('makeWish');wishBtn.onclick=()=>{wished=!wished;document.querySelector('.cake').classList.toggle('blown',wished);wishBtn.textContent=wished?'✦ Thắp nến, ước thêm một lần':'♡ Gửi điều ước & thổi nến';document.getElementById('wishMessage').textContent=wished?'Điều ước đã được gửi tới những vì sao. Chúc em tuổi 21 thật hạnh phúc. Anh thương em! ♡':'Anh mong mọi điều tốt đẹp sẽ tìm đến em.';if(wished&&motion){const r=wishBtn.getBoundingClientRect();for(let i=0;i<24;i++)setTimeout(()=>domHeart(r.left+r.width/2+rnd(-130,130),r.top+rnd(-60,30)),i*35)}};
 })();
 </script>
+</div>
+<script src="intro.js?v=2" onerror="document.documentElement.classList.remove('intro-pending')"></script>
 </body>
 </html>
+
