@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Projects | Thien P. Nguyen</title>
+<meta name="description" content="Explore Thien P. Nguyen's research projects in wireless communications, 1-bit MIMO detection, cooperative relaying, channel modeling, NOMA, cognitive radio, and physical layer security.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/css/styles.css?v=20260918-4">
+<link rel="stylesheet" href="./assets/css/projects.css?v=20261012-1">
 </head>
-<body>
+<body class="projects-view">
+<a class="project-skip-link" href="#projects-main">Skip to projects</a>
 <header class="site-header">
   <div class="nav-container">
     <a class="brand" href="index.html"><img src="./assets/anhthe.png" alt="Thien P. Nguyen"><span>Nguyen Phuc Thien</span></a>
@@ -28,20 +31,165 @@
     <a href="publications.html">Publications</a>
   </nav>
 </header>
-<main class="page-width">
-  <section class="page-hero"><p class="kicker">Research portfolio</p><h1>Projects</h1><p>Selected research and course projects in wireless communications, signal processing, and applied machine learning.</p></section>
-  <section class="project-list">
-    <article class="project-card"><h3>Developing MATLAB Comprehensive Simulation for 5G/6G Wireless Communications</h3><ul><li>Contributed to a practical simulation guide for evaluating energy-efficient technologies in future wireless networks.</li><li>Developed technical content, examples, and simulation-oriented explanations.</li></ul></article>
-    <article class="project-card"><h3>Machine Learning-Based ML Detection for 1-Bit Large-Scale MIMO</h3><ul><li>Studied bias learning and dithering learning for low-resolution MIMO detection.</li><li>Focused on reliable detection with reduced CSI and implementation complexity.</li></ul></article>
-    <article class="project-card"><h3>Cooperative Multi-Hop Relaying in Wireless Communications</h3><ul><li>Developed analytical and MATLAB-based workflows for cooperative and multi-hop relaying.</li><li>Focused on outage analysis, diversity combining, and relay-assisted transmission.</li></ul></article>
-    <article class="project-card"><h3>Generalized Fading Channel Modeling and Performance Evaluation</h3><ul><li>Analyzed Rayleigh, Nakagami-m, Rician, cascaded Rayleigh, and alpha-mu fading channels.</li><li>Implemented Monte Carlo simulations for outage, BER, and capacity evaluation.</li></ul></article>
-    <article class="project-card"><h3>NOMA-Based User Selection in Random Wireless Networks</h3><ul><li>Studied SIC-based NOMA with user selection and power allocation.</li><li>Evaluated outage performance and fairness trade-offs through analysis and simulation.</li></ul></article>
-    <article class="project-card"><h3>Relay Selection in Cognitive Radio Networks</h3><ul><li>Investigated partial and full relay selection in underlay cognitive radio networks.</li><li>Derived and validated outage probability expressions under Rayleigh fading.</li></ul></article>
-    <article class="project-card"><h3>Physical Layer Security in Relay-Assisted Wireless Systems</h3><ul><li>Compared DF and RF relaying from a physical-layer security perspective.</li><li>Evaluated secrecy outage probability and average secrecy capacity.</li></ul></article>
-    <article class="project-card"><h3>Course Projects</h3><ul><li>Automated QR code recognition for Vietnamese citizen ID cards.</li><li>Automatic egg incubator using PIC16F877A.</li><li>Entropy analysis and Huffman coding in MATLAB.</li></ul></article>
+<main id="projects-main" class="page-width projects-page">
+  <section class="research-hero" aria-labelledby="projects-title">
+    <div class="research-hero-copy">
+      <p class="research-eyebrow"><span class="signal-dot" aria-hidden="true"></span>Research &amp; engineering</p>
+      <h1 id="projects-title">Selected <span>projects.</span></h1>
+      <p class="research-intro">From analytical models to working simulations. Exploring reliable, efficient, and secure wireless communications.</p>
+      <div class="research-methods"><span>Theory</span><span aria-hidden="true">↔</span><span>Simulation</span><span class="method-divider" aria-hidden="true"></span><span>Wireless systems</span></div>
+    </div>
+    <div class="signal-art" aria-hidden="true">
+      <div class="signal-art-grid"></div>
+      <svg viewBox="0 0 340 208" fill="none">
+        <defs><linearGradient id="signal-gradient" x1="32" y1="150" x2="308" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor" stop-opacity=".15"/><stop offset=".5" stop-color="currentColor"/><stop offset="1" stop-color="currentColor" stop-opacity=".25"/></linearGradient></defs>
+        <g class="signal-orbits"><ellipse cx="170" cy="104" rx="111" ry="73"/><ellipse cx="170" cy="104" rx="72" ry="47"/></g>
+        <g class="signal-routes"><path d="M43 148L110 63L179 126L243 45L301 104"/><path d="M43 148L179 126L301 104M110 63L243 45"/></g>
+        <path class="signal-flow" d="M43 148L110 63L179 126L243 45L301 104" stroke="url(#signal-gradient)"/>
+        <g class="signal-nodes"><circle cx="43" cy="148" r="6"/><circle cx="110" cy="63" r="6"/><circle cx="179" cy="126" r="8"/><circle cx="243" cy="45" r="6"/><circle cx="301" cy="104" r="6"/></g>
+        <circle class="signal-ring" cx="179" cy="126" r="18"/>
+        <g class="signal-labels" fill="currentColor"><text x="18" y="176">SOURCE</text><text x="92" y="42">RELAY</text><text x="271" y="132">RECEIVER</text></g>
+      </svg>
+      <span class="signal-art-caption">MODELING THE CONNECTION</span>
+    </div>
   </section>
+
+  <article class="book-feature" aria-labelledby="book-title">
+    <a class="book-visual figure-link" href="./assets/projects/matlab-5g-6g-book.jpg" target="_blank" rel="noopener" data-figure data-caption="Developing MATLAB Comprehensive Simulation for 5G/6G Wireless Communications — Springer book cover" aria-label="Enlarge the MATLAB 5G/6G book cover">
+      <span class="book-halo" aria-hidden="true"></span>
+      <img src="./assets/projects/matlab-5g-6g-book.jpg" width="1359" height="2048" alt="Cover of Developing MATLAB Comprehensive Simulation for 5G/6G Wireless Communications, by Phuong T. Tran, Tan N. Nguyen, and Lam-Thanh Tu" fetchpriority="high" decoding="async">
+    </a>
+    <div class="book-copy">
+      <div class="project-meta"><span class="project-type">Book contribution</span><span class="project-meta-label">Springer · Signals and Communication Technology</span></div>
+      <h2 id="book-title">Developing MATLAB Comprehensive Simulation for 5G/6G Wireless Communications</h2>
+      <p>Contributed to technical chapters, simulation workflows, and practical examples for a guidebook on evaluating energy-efficient technologies in future wireless networks.</p>
+      <ul class="project-tags" aria-label="Book topics"><li>MATLAB</li><li>5G / 6G</li><li>Green communications</li></ul>
+      <a class="project-resource-link" href="https://doi.org/10.1007/978-981-95-1117-4" target="_blank" rel="noopener">View book <span aria-hidden="true">↗</span></a>
+    </div>
+    <span class="book-feature-label" aria-hidden="true">FEATURED CONTRIBUTION</span>
+  </article>
+
+  <section class="research-collection" aria-labelledby="research-studies-title">
+    <div class="project-section-heading"><div><p class="research-eyebrow">A closer look</p><h2 id="research-studies-title">Research studies</h2></div><p class="section-aside">Analysis. Implementation. Evaluation.</p></div>
+    <div class="research-toolbar" hidden>
+      <div class="research-filters" role="group" aria-label="Filter research projects">
+        <button class="research-filter active" type="button" data-project-filter="all" aria-pressed="true">All topics</button>
+        <button class="research-filter" type="button" data-project-filter="detection" aria-pressed="false">Signal detection</button>
+        <button class="research-filter" type="button" data-project-filter="networks" aria-pressed="false">Wireless networks</button>
+        <button class="research-filter" type="button" data-project-filter="security" aria-pressed="false">Security</button>
+      </div>
+      <p class="research-result-count" aria-live="polite" aria-atomic="true">6 projects</p>
+    </div>
+    <div class="research-grid">
+      <article class="research-card" data-project-category="detection">
+        <a class="project-figure figure-link" href="./assets/projects/one-bit-mimo.webp" target="_blank" rel="noopener" data-figure data-caption="1-bit large-scale MIMO — bias and dithering learning receiver architecture" aria-label="Enlarge the 1-bit MIMO receiver architecture">
+          <img src="./assets/projects/one-bit-mimo.webp" width="2048" height="1165" alt="1-bit MIMO receiver architecture with RF processing, injected dithering, probability learning, and maximum likelihood detection" loading="lazy" decoding="async">
+          <span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span>
+        </a>
+        <div class="research-card-content">
+          <div class="project-meta"><span class="project-type">Signal detection</span><span class="project-number">01</span></div>
+          <h3>Machine Learning-Based ML Detection for 1-Bit Large-Scale MIMO</h3>
+          <p class="project-description">Bias and dithering learning for reliable signal detection with 1-bit ADCs, reduced CSI requirements, and lower implementation complexity.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>1-bit ADCs</li><li>Bias learning</li><li>MIMO</li></ul>
+          <details class="project-details"><summary>Approach &amp; scope <span aria-hidden="true">+</span></summary><ul><li>Study bias learning and dithering learning in low-resolution receiver architectures.</li><li>Evaluate detection without detailed channel state information, with an emphasis on energy and implementation efficiency.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="research-card" data-project-category="networks">
+        <a class="project-figure figure-link" href="./assets/projects/cooperative-relaying.webp" target="_blank" rel="noopener" data-figure data-caption="Cooperative relaying — theoretical and simulated outage probability versus transmit SNR" aria-label="Enlarge the cooperative relaying outage probability figure">
+          <img src="./assets/projects/cooperative-relaying.webp" width="2048" height="1541" alt="Outage probability versus transmit SNR comparing direct transmission with cooperative communication, including theory curves and simulation markers" loading="lazy" decoding="async">
+          <span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span>
+        </a>
+        <div class="research-card-content">
+          <div class="project-meta"><span class="project-type">Cooperative networks</span><span class="project-number">02</span></div>
+          <h3>Cooperative Multi-Hop Relaying in Wireless Communications</h3>
+          <p class="project-description">Analytical and MATLAB-based workflows for relay-assisted transmission, connecting cooperative forwarding and diversity combining to outage performance.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>Relaying</li><li>Diversity</li><li>MATLAB</li></ul>
+          <details class="project-details"><summary>Approach &amp; scope <span aria-hidden="true">+</span></summary><ul><li>Develop a research guide for students and early researchers studying cooperative and multi-hop systems.</li><li>Build system models and compare theoretical outage analysis with Monte Carlo simulations.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="research-card" data-project-category="networks">
+        <a class="project-figure figure-link" href="./assets/projects/fading-channels.webp" target="_blank" rel="noopener" data-figure data-caption="Fading channel evaluation — theoretical and simulated outage probability under different channel parameters" aria-label="Enlarge the fading channel outage probability figure">
+          <img src="./assets/projects/fading-channels.webp" width="2048" height="1563" alt="Outage probability versus transmit SNR for three channel parameter values, with theoretical curves and Monte Carlo simulation markers" loading="lazy" decoding="async">
+          <span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span>
+        </a>
+        <div class="research-card-content">
+          <div class="project-meta"><span class="project-type">Channel modeling</span><span class="project-number">03</span></div>
+          <h3>Generalized Fading Channel Modeling and Performance Evaluation</h3>
+          <p class="project-description">A simulation-based study of wireless channel statistics, linking fading models to outage probability, bit error rate, and average Shannon capacity.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>Fading models</li><li>Monte Carlo</li><li>Outage</li></ul>
+          <details class="project-details"><summary>Approach &amp; scope <span aria-hidden="true">+</span></summary><ul><li>Analyze Rayleigh, Nakagami-m, Rician, cascaded Rayleigh, and alpha-mu fading channels.</li><li>Implement MATLAB simulations and analytical performance evaluation as a thesis-scale study guide.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="research-card" data-project-category="networks">
+        <a class="project-figure figure-link" href="./assets/projects/noma-user-selection.webp" target="_blank" rel="noopener" data-figure data-caption="NOMA user selection — outage probability of the second-best user for different user populations" aria-label="Enlarge the NOMA user selection outage probability figure">
+          <img src="./assets/projects/noma-user-selection.webp" width="2048" height="1546" alt="Outage probability of the second-best NOMA user versus transmit SNR for user populations M equals 2, 3, and 4" loading="lazy" decoding="async">
+          <span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span>
+        </a>
+        <div class="research-card-content">
+          <div class="project-meta"><span class="project-type">Multiple access</span><span class="project-number">04</span></div>
+          <h3>NOMA-Based User Selection in Random Wireless Networks</h3>
+          <p class="project-description">SIC-based decoding and strongest-user selection in random networks, examining the effects of SNR, user population, and power allocation.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>NOMA</li><li>SIC</li><li>User selection</li></ul>
+          <details class="project-details"><summary>Approach &amp; scope <span aria-hidden="true">+</span></summary><ul><li>Model a base station selecting the two strongest users for non-orthogonal multiple access.</li><li>Develop outage analysis and simulation models to explore fairness between near and far users.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="research-card" data-project-category="networks">
+        <a class="project-figure figure-link" href="./assets/projects/cognitive-radio.webp" target="_blank" rel="noopener" data-figure data-caption="Cognitive radio — partial and full relay selection outage probability versus interference constraint Q" aria-label="Enlarge the cognitive radio relay selection figure">
+          <img src="./assets/projects/cognitive-radio.webp" width="2047" height="1465" alt="Outage probability versus Q comparing partial relay selection and full relay selection at two decoding thresholds" loading="lazy" decoding="async">
+          <span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span>
+        </a>
+        <div class="research-card-content">
+          <div class="project-meta"><span class="project-type">Spectrum sharing</span><span class="project-number">05</span></div>
+          <h3>Relay Selection in Cognitive Radio Networks</h3>
+          <p class="project-description">Partial and full relay selection for underlay cognitive radio, studying reliability under Rayleigh fading and primary-user interference constraints.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>Cognitive radio</li><li>PRS / FRS</li><li>Rayleigh</li></ul>
+          <details class="project-details"><summary>Approach &amp; scope <span aria-hidden="true">+</span></summary><ul><li>Derive and validate outage probability expressions with multiple primary-user constraints.</li><li>Examine spectrum utilization, coverage, and the distinction between coding gain and diversity gain.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="research-card" data-project-category="security">
+        <a class="project-figure figure-link" href="./assets/projects/physical-layer-security.webp" target="_blank" rel="noopener" data-figure data-caption="Physical layer security — secrecy outage probability of Randomize-and-Forward and Decode-and-Forward relaying" aria-label="Enlarge the physical layer security secrecy outage figure">
+          <img src="./assets/projects/physical-layer-security.webp" width="2048" height="1628" alt="Secrecy outage probability versus SNR comparing Randomize-and-Forward and Decode-and-Forward relaying with theory and simulation" loading="lazy" decoding="async">
+          <span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span>
+        </a>
+        <div class="research-card-content">
+          <div class="project-meta"><span class="project-type">Physical layer security</span><span class="project-number">06</span></div>
+          <h3>Physical Layer Security in Relay-Assisted Wireless Systems</h3>
+          <p class="project-description">A comparison of Decode-and-Forward and Randomize-and-Forward relaying through secrecy outage probability and average secrecy capacity.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>PLS</li><li>DF / RF</li><li>Secrecy outage</li></ul>
+          <details class="project-details"><summary>Approach &amp; scope <span aria-hidden="true">+</span></summary><ul><li>Develop a research guide for secure relay-assisted transmission over Rayleigh fading channels.</li><li>Study the secrecy performance and implementation complexity trade-off between the two protocols.</li></ul></details>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <article class="research-program" aria-labelledby="program-title">
+    <div class="program-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="4"/><path d="M11 13h10M11 18h6M19 22l2 2 5-5"/><path d="M12 7V4h8v3"/></svg></div>
+    <div><p class="research-eyebrow">Research program</p><h2 id="program-title">Global Talent Training Program for Copyright Management Technology in Game Contents</h2><p>Contributed to literature review and the identification of related research, alongside implementation and troubleshooting of simulation programs.</p></div>
+  </article>
+
+  <section class="course-collection" aria-labelledby="course-title">
+    <div class="project-section-heading"><div><p class="research-eyebrow">Beyond wireless</p><h2 id="course-title">Course projects</h2></div><p class="section-aside">Building the engineering foundations.</p></div>
+    <div class="course-grid">
+      <article class="course-card"><div class="course-card-top"><span class="course-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M3 3h9v9H3zM20 3h9v9h-9zM3 20h9v9H3zM20 20h4v4h-4zM25 25h4v4h-4zM20 29v-4M29 20h-4M7 6v3M24 6v3M7 23v3"/></svg></span><span>COMPUTER VISION</span></div><h3>Automated QR Code Recognition for Vietnamese Citizen ID Cards</h3><p>Detect and decode QR codes using grayscale conversion, adaptive thresholding, and contour detection.</p><ul class="project-tags"><li>OpenCV</li><li>Image processing</li></ul></article>
+      <article class="course-card"><div class="course-card-top"><span class="course-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="8" y="8" width="16" height="16" rx="3"/><path d="M12 12h8v8h-8zM12 3v5M20 3v5M12 24v5M20 24v5M3 12h5M3 20h5M24 12h5M24 20h5"/></svg></span><span>EMBEDDED SYSTEMS</span></div><h3>Automatic Egg Incubator with PIC16F877A</h3><p>Control temperature, humidity, and egg rotation with sensors, an LCD, and relay-based actuation.</p><ul class="project-tags"><li>Embedded C</li><li>PIC16F877A</li></ul></article>
+      <article class="course-card"><div class="course-card-top"><span class="course-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 8v5M16 13H7v10M16 13h9v10"/><circle cx="16" cy="5" r="3"/><circle cx="7" cy="26" r="3"/><circle cx="25" cy="26" r="3"/></svg></span><span>INFORMATION THEORY</span></div><h3>Entropy Analysis and Huffman Coding in MATLAB</h3><p>Model discrete sources and compare code length, coding efficiency, and redundancy in source coding.</p><ul class="project-tags"><li>MATLAB</li><li>Huffman coding</li></ul></article>
+    </div>
+  </section>
+
+  <section class="project-contact" aria-label="Contact about research"><div><span class="signal-dot" aria-hidden="true"></span><p>Interested in the work?</p></div><a href="mailto:nguyenphucthien999@gmail.com">Let's connect <span aria-hidden="true">↗</span></a></section>
 </main>
+<dialog class="figure-dialog" aria-labelledby="figure-dialog-caption">
+  <div class="figure-dialog-toolbar"><span>PROJECT FIGURE</span><button class="figure-close" type="button" aria-label="Close enlarged figure" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <div class="figure-dialog-stage"><img class="figure-dialog-image" alt=""></div>
+  <div class="figure-dialog-footer"><p id="figure-dialog-caption"></p><a class="figure-original" target="_blank" rel="noopener">Open full size <span aria-hidden="true">↗</span></a></div>
+</dialog>
 <footer class="site-footer"><div class="page-width footer-inner"><p>© 2026 Thien P. Nguyen</p><div><a href="index.html">Home</a><a href="mailto:nguyenphucthien999@gmail.com">Email</a></div></div></footer>
 <script src="./assets/js/main.js?v=20260918-4"></script>
+<script src="./assets/js/projects.js?v=20261012-1"></script>
 </body>
 </html>
