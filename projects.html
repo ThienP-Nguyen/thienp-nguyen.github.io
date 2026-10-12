@@ -5,9 +5,9 @@
 <title>Projects | Thien P. Nguyen</title>
 <meta name="description" content="Explore Thien P. Nguyen's research projects in wireless communications, 1-bit MIMO detection, cooperative relaying, channel modeling, NOMA, cognitive radio, and physical layer security.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Orbitron:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/css/styles.css?v=20260918-4">
-<link rel="stylesheet" href="./assets/css/projects.css?v=20261012-1">
+<link rel="stylesheet" href="./assets/css/projects.css?v=20261012-2">
 </head>
 <body class="projects-view">
 <a class="project-skip-link" href="#projects-main">Skip to projects</a>
@@ -34,23 +34,38 @@
 <main id="projects-main" class="page-width projects-page">
   <section class="research-hero" aria-labelledby="projects-title">
     <div class="research-hero-copy">
-      <p class="research-eyebrow"><span class="signal-dot" aria-hidden="true"></span>Research &amp; engineering</p>
-      <h1 id="projects-title">Selected <span>projects.</span></h1>
-      <p class="research-intro">From analytical models to working simulations. Exploring reliable, efficient, and secure wireless communications.</p>
-      <div class="research-methods"><span>Theory</span><span aria-hidden="true">↔</span><span>Simulation</span><span class="method-divider" aria-hidden="true"></span><span>Wireless systems</span></div>
+      <h1 id="projects-title">Selected <span>Project</span></h1>
     </div>
-    <div class="signal-art" aria-hidden="true">
-      <div class="signal-art-grid"></div>
-      <svg viewBox="0 0 340 208" fill="none">
-        <defs><linearGradient id="signal-gradient" x1="32" y1="150" x2="308" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor" stop-opacity=".15"/><stop offset=".5" stop-color="currentColor"/><stop offset="1" stop-color="currentColor" stop-opacity=".25"/></linearGradient></defs>
-        <g class="signal-orbits"><ellipse cx="170" cy="104" rx="111" ry="73"/><ellipse cx="170" cy="104" rx="72" ry="47"/></g>
-        <g class="signal-routes"><path d="M43 148L110 63L179 126L243 45L301 104"/><path d="M43 148L179 126L301 104M110 63L243 45"/></g>
-        <path class="signal-flow" d="M43 148L110 63L179 126L243 45L301 104" stroke="url(#signal-gradient)"/>
-        <g class="signal-nodes"><circle cx="43" cy="148" r="6"/><circle cx="110" cy="63" r="6"/><circle cx="179" cy="126" r="8"/><circle cx="243" cy="45" r="6"/><circle cx="301" cy="104" r="6"/></g>
-        <circle class="signal-ring" cx="179" cy="126" r="18"/>
-        <g class="signal-labels" fill="currentColor"><text x="18" y="176">SOURCE</text><text x="92" y="42">RELAY</text><text x="271" y="132">RECEIVER</text></g>
+    <div class="ris-art" role="img" aria-label="Illustrative RIS-assisted multi-user wireless system: a base station sends a signal to a programmable reflecting surface, which redirects it to two users. A controller configures the RIS elements.">
+      <div class="ris-art-grid" aria-hidden="true"></div>
+      <svg viewBox="0 0 430 230" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="ris-face" x1="0" y1="0" x2="72" y2="96" gradientUnits="userSpaceOnUse"><stop stop-color="#193c67"/><stop offset="1" stop-color="#071c36"/></linearGradient>
+          <linearGradient id="ris-beam" x1="205" y1="106" x2="366" y2="183" gradientUnits="userSpaceOnUse"><stop stop-color="#17aeb7" stop-opacity=".2"/><stop offset="1" stop-color="#3293d9" stop-opacity="0"/></linearGradient>
+          <linearGradient id="ris-scan" x1="0" y1="0" x2="0" y2="16" gradientUnits="userSpaceOnUse"><stop stop-color="#62f2df" stop-opacity="0"/><stop offset=".5" stop-color="#62f2df" stop-opacity=".48"/><stop offset="1" stop-color="#62f2df" stop-opacity="0"/></linearGradient>
+          <pattern id="ris-elements" width="12" height="12" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="8" height="8" rx="1" fill="#2a6b9c" stroke="#6dd6e5" stroke-width=".5"/></pattern>
+          <clipPath id="ris-scan-clip"><rect width="72" height="96" rx="3"/></clipPath>
+        </defs>
+        <path class="ris-ground" d="M23 165 220 218 411 158 218 110Z"/>
+        <ellipse class="ris-orbit" cx="218" cy="123" rx="143" ry="89"/>
+        <path class="ris-beam-volume" d="M204 95 304 131 319 161 203 112Z" fill="url(#ris-beam)"/>
+        <path class="ris-beam-volume" d="M202 98 365 171 371 200 200 114Z" fill="url(#ris-beam)"/>
+        <g class="ris-link-lines"><path d="M66 142Q128 92 203 101"/><path d="M204 101Q265 91 311 144"/><path d="M204 104Q298 128 364 184"/></g>
+        <g class="ris-packets"><path d="M66 142Q128 92 203 101"/><path d="M204 101Q265 91 311 144"/><path d="M204 104Q298 128 364 184"/></g>
+        <g class="ris-bs" transform="translate(52 111)"><circle cx="14" cy="14" r="3"/><path d="M14 18v31M5 49l9-25 9 25M8 37h12M2 22a17 17 0 0 1 0-20M26 2a17 17 0 0 1 0 20"/><path class="ris-radio-wave" d="M-4 27a25 25 0 0 1 0-30M32-3a25 25 0 0 1 0 30"/></g>
+        <g transform="matrix(1 .24 -.24 1 210 25)">
+          <path d="M72 0 77-4V92L72 96Z" fill="#174c72" stroke="#67cde2" stroke-width=".6"/>
+          <path d="M0 0 5-4H77L72 0Z" fill="#366887" stroke="#67cde2" stroke-width=".6"/>
+          <rect class="ris-panel-face" width="72" height="96" rx="3" fill="url(#ris-face)" stroke="#7bd3ee" stroke-width="1"/>
+          <rect x="4" y="4" width="64" height="88" fill="url(#ris-elements)"/>
+          <g class="ris-phase-cells"><rect x="14" y="26" width="8" height="8" rx="1"/><rect x="26" y="38" width="8" height="8" rx="1"/><rect x="38" y="50" width="8" height="8" rx="1"/><rect x="50" y="62" width="8" height="8" rx="1"/></g>
+          <g clip-path="url(#ris-scan-clip)"><rect class="ris-scan" width="72" height="16" fill="url(#ris-scan)"/></g>
+        </g>
+        <g class="ris-users"><g transform="translate(302 126)"><rect width="18" height="30" rx="4"/><path d="M6 5h6M7 25h4"/><circle class="ris-user-wave" cx="9" cy="15" r="21"/></g><g transform="translate(355 170)"><rect width="18" height="30" rx="4"/><path d="M6 5h6M7 25h4"/><circle class="ris-user-wave" cx="9" cy="15" r="21"/></g></g>
+        <path class="ris-control-link" d="M211 180V153L222 130"/>
+        <g class="ris-controller" transform="translate(193 180)"><rect width="36" height="20" rx="4"/><path d="M8 7h20M8 12h13"/></g>
+        <g class="ris-labels" fill="currentColor"><text x="58" y="185">BS</text><text x="297" y="43">RIS</text><text x="307" y="173">U₁</text><text x="359" y="216">U₂</text><text class="ris-controller-label" x="183" y="216">PHASE CONTROL</text></g>
       </svg>
-      <span class="signal-art-caption">MODELING THE CONNECTION</span>
     </div>
   </section>
 
@@ -69,8 +84,26 @@
     <span class="book-feature-label" aria-hidden="true">FEATURED CONTRIBUTION</span>
   </article>
 
+  <article class="research-program" aria-labelledby="program-title">
+    <div class="program-overview">
+      <div class="program-copy">
+        <p class="research-eyebrow">Research program</p>
+        <h2 id="program-title">Global Talent Training Program for Copyright Management Technology in Game Contents</h2>
+        <div class="program-partners" aria-label="Vietnam–South Korea university collaboration"><span><small>Vietnam</small>Ton Duc Thang University</span><span class="partner-link-symbol" aria-hidden="true">×</span><span><small>South Korea</small>Hongik University</span></div>
+        <p class="program-role"><strong>Research support:</strong> literature review, simulation implementation, and troubleshooting.</p>
+      </div>
+      <div class="program-output-stat" aria-label="Three IEEE Access papers linked as program outputs"><strong>03</strong><span>IEEE Access papers</span></div>
+    </div>
+    <div class="program-output-heading"><h3>Project outputs</h3><span>IEEE Access · 2025</span></div>
+    <ol class="program-papers">
+      <li><span class="program-paper-topic">RIS · NOMA</span><h4><a href="https://ieeexplore.ieee.org/document/10856109" target="_blank" rel="noopener">Performance of RIS-Secured Short-Packet NOMA Systems With Discrete Phase-Shifter to Protect Digital Content and Copyright Against Untrusted User</a></h4><a class="program-paper-link" href="https://ieeexplore.ieee.org/document/10856109" target="_blank" rel="noopener" aria-label="Read the RIS-secured short-packet NOMA paper on IEEE Xplore">IEEE Xplore <span aria-hidden="true">↗</span></a></li>
+      <li><span class="program-paper-topic">Ambient backscatter</span><h4><a href="https://ieeexplore.ieee.org/document/11248821" target="_blank" rel="noopener">On the Performance of Secured Ambient Backscatter Communications to Protect Digital Content and Copyrights</a></h4><a class="program-paper-link" href="https://ieeexplore.ieee.org/document/11248821" target="_blank" rel="noopener" aria-label="Read the secured ambient backscatter paper on IEEE Xplore">IEEE Xplore <span aria-hidden="true">↗</span></a></li>
+      <li><span class="program-paper-topic">Secrecy · Energy harvesting</span><h4><a href="https://ieeexplore.ieee.org/document/11131200" target="_blank" rel="noopener">Precise Analysis of Secrecy Outage Probability and Eavesdropping Strategies in Secure, Energy-Efficient Wireless Networks for Copyright Protection of Digital Contents</a></h4><a class="program-paper-link" href="https://ieeexplore.ieee.org/document/11131200" target="_blank" rel="noopener" aria-label="Read the secrecy outage and copyright protection paper on IEEE Xplore">IEEE Xplore <span aria-hidden="true">↗</span></a></li>
+    </ol>
+  </article>
+
   <section class="research-collection" aria-labelledby="research-studies-title">
-    <div class="project-section-heading"><div><p class="research-eyebrow">A closer look</p><h2 id="research-studies-title">Research studies</h2></div><p class="section-aside">Analysis. Implementation. Evaluation.</p></div>
+    <div class="project-section-heading"><h2 id="research-studies-title">Research studies</h2></div>
     <div class="research-toolbar" hidden>
       <div class="research-filters" role="group" aria-label="Filter research projects">
         <button class="research-filter active" type="button" data-project-filter="all" aria-pressed="true">All topics</button>
@@ -167,29 +200,45 @@
     </div>
   </section>
 
-  <article class="research-program" aria-labelledby="program-title">
-    <div class="program-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="4"/><path d="M11 13h10M11 18h6M19 22l2 2 5-5"/><path d="M12 7V4h8v3"/></svg></div>
-    <div><p class="research-eyebrow">Research program</p><h2 id="program-title">Global Talent Training Program for Copyright Management Technology in Game Contents</h2><p>Contributed to literature review and the identification of related research, alongside implementation and troubleshooting of simulation programs.</p></div>
-  </article>
-
   <section class="course-collection" aria-labelledby="course-title">
-    <div class="project-section-heading"><div><p class="research-eyebrow">Beyond wireless</p><h2 id="course-title">Course projects</h2></div><p class="section-aside">Building the engineering foundations.</p></div>
+    <div class="project-section-heading"><h2 id="course-title">Course projects</h2></div>
     <div class="course-grid">
-      <article class="course-card"><div class="course-card-top"><span class="course-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M3 3h9v9H3zM20 3h9v9h-9zM3 20h9v9H3zM20 20h4v4h-4zM25 25h4v4h-4zM20 29v-4M29 20h-4M7 6v3M24 6v3M7 23v3"/></svg></span><span>COMPUTER VISION</span></div><h3>Automated QR Code Recognition for Vietnamese Citizen ID Cards</h3><p>Detect and decode QR codes using grayscale conversion, adaptive thresholding, and contour detection.</p><ul class="project-tags"><li>OpenCV</li><li>Image processing</li></ul></article>
-      <article class="course-card"><div class="course-card-top"><span class="course-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="8" y="8" width="16" height="16" rx="3"/><path d="M12 12h8v8h-8zM12 3v5M20 3v5M12 24v5M20 24v5M3 12h5M3 20h5M24 12h5M24 20h5"/></svg></span><span>EMBEDDED SYSTEMS</span></div><h3>Automatic Egg Incubator with PIC16F877A</h3><p>Control temperature, humidity, and egg rotation with sensors, an LCD, and relay-based actuation.</p><ul class="project-tags"><li>Embedded C</li><li>PIC16F877A</li></ul></article>
-      <article class="course-card"><div class="course-card-top"><span class="course-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 8v5M16 13H7v10M16 13h9v10"/><circle cx="16" cy="5" r="3"/><circle cx="7" cy="26" r="3"/><circle cx="25" cy="26" r="3"/></svg></span><span>INFORMATION THEORY</span></div><h3>Entropy Analysis and Huffman Coding in MATLAB</h3><p>Model discrete sources and compare code length, coding efficiency, and redundancy in source coding.</p><ul class="project-tags"><li>MATLAB</li><li>Huffman coding</li></ul></article>
+      <article class="course-card">
+        <a class="project-figure figure-link" href="./assets/projects/qr-multiple-detection.webp" target="_blank" rel="noopener" data-figure data-gallery="qr" data-gallery-order="3" data-caption="OpenCV QR detection — upright, rotated, and undecodable QR test cases" aria-label="Enlarge the QR code detection results">
+          <img src="./assets/projects/qr-multiple-detection.webp" width="1920" height="1080" alt="OpenCV results and detection boxes for upright, rotated, and undecodable QR codes" loading="lazy" decoding="async"><span class="figure-expand" aria-hidden="true">View gallery <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span>
+        </a>
+        <div class="course-card-content">
+          <span class="project-type">Computer vision</span>
+          <h3>Automated QR Code Recognition for Vietnamese Citizen ID Cards</h3><p>Detect and decode QR codes using grayscale conversion, adaptive thresholding, and contour detection.</p>
+          <ul class="project-tags"><li>OpenCV</li><li>Image processing</li></ul>
+          <div class="course-gallery" aria-label="Additional QR project images">
+            <a class="figure-link" href="./assets/projects/qr-inputs.webp" target="_blank" rel="noopener" data-figure data-gallery="qr" data-gallery-order="1" data-caption="QR project inputs — ID-card, multiple-code, and no-code test images" aria-label="View the QR project input images"><img src="./assets/projects/qr-inputs.webp" width="1920" height="1080" alt="Input slide with ID-card, multiple QR code, and no-code test images" loading="lazy" decoding="async"><span>Inputs</span></a>
+            <a class="figure-link" href="./assets/projects/qr-id-detection.webp" target="_blank" rel="noopener" data-figure data-gallery="qr" data-gallery-order="2" data-caption="ID-card image — QR detection result and program output" aria-label="View the ID-card QR detection result"><img src="./assets/projects/qr-id-detection.webp" width="1920" height="1080" alt="QR detection result on the ID-card test image with program output" loading="lazy" decoding="async"><span>ID detection</span></a>
+            <a class="figure-link" href="./assets/projects/qr-negative-test.webp" target="_blank" rel="noopener" data-figure data-gallery="qr" data-gallery-order="4" data-caption="Negative test — the program reports that no QR code is present" aria-label="View the no-QR negative test"><img src="./assets/projects/qr-negative-test.webp" width="1920" height="1080" alt="No-code test image and terminal output reporting that no QR code was found" loading="lazy" decoding="async"><span>No-QR test</span></a>
+          </div>
+          <a class="course-video-link" href="https://www.youtube.com/watch?v=bdVWQgFS8y8" target="_blank" rel="noopener" aria-label="Watch the automated QR recognition project demo on YouTube"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5 8 5-8 5Z"/></svg>Watch demo <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="course-card">
+        <a class="project-figure figure-link" href="./assets/projects/pic16f877a-circuit.jpg" target="_blank" rel="noopener" data-figure data-caption="PIC16F877A project — circuit schematic in Proteus" aria-label="Enlarge the PIC16F877A circuit schematic"><img src="./assets/projects/pic16f877a-circuit.jpg" width="2048" height="995" alt="PIC16F877A circuit schematic with an LM35 temperature sensor, display, switches, and relay" loading="lazy" decoding="async"><span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span></a>
+        <div class="course-card-content"><span class="project-type">Embedded systems</span><h3>Automatic Egg Incubator with PIC16F877A</h3><p>Control temperature, humidity, and egg rotation through sensor monitoring and relay-based actuation.</p><ul class="project-tags"><li>Embedded C</li><li>PIC16F877A</li></ul></div>
+      </article>
+      <article class="course-card">
+        <a class="project-figure figure-link" href="./assets/projects/huffman-matlab.webp" target="_blank" rel="noopener" data-figure data-caption="MATLAB implementation — entropy, Huffman coding efficiency, and redundancy results" aria-label="Enlarge the MATLAB entropy and Huffman coding results"><img src="./assets/projects/huffman-matlab.webp" width="2048" height="1225" alt="MATLAB code and output comparing base-2 and base-3 entropy, Huffman coding efficiency, and redundancy" loading="lazy" decoding="async"><span class="figure-expand" aria-hidden="true">View figure <svg viewBox="0 0 20 20"><path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6"/></svg></span></a>
+        <div class="course-card-content"><span class="project-type">Information theory</span><h3>Entropy Analysis and Huffman Coding in MATLAB</h3><p>Model discrete sources and compare code length, coding efficiency, and redundancy in source coding.</p><ul class="project-tags"><li>MATLAB</li><li>Huffman coding</li></ul></div>
+      </article>
     </div>
   </section>
 
   <section class="project-contact" aria-label="Contact about research"><div><span class="signal-dot" aria-hidden="true"></span><p>Interested in the work?</p></div><a href="mailto:nguyenphucthien999@gmail.com">Let's connect <span aria-hidden="true">↗</span></a></section>
 </main>
 <dialog class="figure-dialog" aria-labelledby="figure-dialog-caption">
-  <div class="figure-dialog-toolbar"><span>PROJECT FIGURE</span><button class="figure-close" type="button" aria-label="Close enlarged figure" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <div class="figure-dialog-toolbar"><span>PROJECT FIGURE</span><div class="figure-gallery-nav" hidden><button class="figure-previous" type="button" aria-label="Previous project image">←</button><span class="figure-position" aria-live="polite" aria-atomic="true"></span><button class="figure-next" type="button" aria-label="Next project image">→</button></div><button class="figure-close" type="button" aria-label="Close enlarged figure" autofocus><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
   <div class="figure-dialog-stage"><img class="figure-dialog-image" alt=""></div>
   <div class="figure-dialog-footer"><p id="figure-dialog-caption"></p><a class="figure-original" target="_blank" rel="noopener">Open full size <span aria-hidden="true">↗</span></a></div>
 </dialog>
 <footer class="site-footer"><div class="page-width footer-inner"><p>© 2026 Thien P. Nguyen</p><div><a href="index.html">Home</a><a href="mailto:nguyenphucthien999@gmail.com">Email</a></div></div></footer>
 <script src="./assets/js/main.js?v=20260918-4"></script>
-<script src="./assets/js/projects.js?v=20261012-1"></script>
+<script src="./assets/js/projects.js?v=20261012-2"></script>
 </body>
 </html>
