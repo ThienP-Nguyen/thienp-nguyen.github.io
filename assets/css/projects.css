@@ -70,7 +70,6 @@
 .research-filter { padding: 7px 12px; background: transparent; color: var(--muted); border: 1px solid var(--line); border-radius: 7px; font-size: 9px; line-height: 1.5; font-weight: 650; cursor: pointer; transition: color .2s, background .2s, border-color .2s; }
 .research-filter:hover { color: var(--blue); border-color: var(--blue); }
 .research-filter.active { background: var(--blue); color: var(--surface); border-color: var(--blue); }
-.research-result-count { margin: 0; color: var(--muted); font-size: 8px; white-space: nowrap; }
 .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: start; }
 .research-card { --pointer-x: 50%; --pointer-y: 0%; position: relative; min-width: 0; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); overflow: hidden; box-shadow: 0 3px 10px rgba(26, 51, 83, .025); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
 .research-card::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; background: radial-gradient(240px circle at var(--pointer-x) var(--pointer-y), color-mix(in srgb, var(--project-accent) 6%, transparent), transparent 75%); opacity: 0; transition: opacity .3s; }
@@ -214,7 +213,6 @@ body.dark-mode .research-filter.active { color: #101a27; }
   .project-section-heading h2 { font-size: 22px; }
   .research-toolbar { align-items: flex-start; flex-direction: column; gap: 10px; }
   .research-filter { padding: 8px 10px; font-size: 9px; }
-  .research-result-count { align-self: flex-end; }
   .research-grid, .course-grid { grid-template-columns: 1fr; gap: 20px; }
   .project-figure { height: auto; aspect-ratio: 1.55; max-height: 350px; padding: 17px 17px 23px; }
   .research-card-content { padding: 20px 22px 0; }

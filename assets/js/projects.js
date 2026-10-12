@@ -2,7 +2,6 @@
   const cards = [...document.querySelectorAll('.research-card')];
   const filters = [...document.querySelectorAll('[data-project-filter]')];
   const toolbar = document.querySelector('.research-toolbar');
-  const resultCount = document.querySelector('.research-result-count');
 
   if (cards.length && filters.length) {
     toolbar.hidden = false;
@@ -14,12 +13,9 @@
           filter.classList.toggle('active', selected);
           filter.setAttribute('aria-pressed', String(selected));
         });
-        let visible = 0;
         cards.forEach(card => {
           card.hidden = category !== 'all' && card.dataset.projectCategory !== category;
-          if (!card.hidden) visible += 1;
         });
-        resultCount.textContent = `${visible} project${visible === 1 ? '' : 's'}`;
       });
     });
   }
