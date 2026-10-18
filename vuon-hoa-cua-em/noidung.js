@@ -1,20 +1,13 @@
-/* Nội dung cá nhân hóa. Ngày chưa được cung cấp được để trống, không tự suy đoán. */
 window.GARDEN_CONTENT = {
-  firstMet: '2025-10-18', // YYYY-MM-DD — ngày đầu tiên gặp nhau, theo giờ Việt Nam.
-  song: {title:'Phép Màu', artist:'MAYDAYs ft. Minh Tốc', youtubeId:'HhcTaxixdSI'},
-  flowerNotes: [
-    {kicker:'01 / SỰ DỊU DÀNG', title:'Anh thương những điều rất nhỏ.', message:'Thương cách em cười, cách em nói, cả những lúc em chẳng làm gì đặc biệt. Chỉ cần là em, những điều nhỏ xíu cũng đủ khiến lòng anh dịu lại.'},
-    {kicker:'02 / NIỀM VUI', title:'Em là phần đáng yêu của ngày.', message:'Có những ngày chẳng có gì mới, nhưng chỉ cần nghĩ đến em là anh lại thấy vui. Cảm ơn Vợ Cún vì đã làm thế giới của Chó Béo đáng yêu hơn nhiều đến thế.'},
-    {kicker:'03 / BÌNH YÊN', title:'Bên em, anh được là anh.', message:'Anh mong mình luôn là một nơi bình yên của nhau. Một nơi em có thể kể những chuyện rất vui, than những điều rất mệt, hoặc chẳng cần nói gì mà vẫn thấy được thương.'},
-    {kicker:'04 / NHỚ THƯƠNG', title:'Có một người anh luôn nghĩ tới.', message:'Những điều đẹp anh nhìn thấy, những chuyện vui anh gặp được, anh đều muốn kể em nghe. Thì ra nhớ một người đôi khi chỉ là muốn dành cho người ấy một phần trong mọi ngày của mình.'},
-    {kicker:'05 / NGÀY MAI', title:'Anh muốn cùng em viết tiếp.', message:'Không chỉ những ngày rực rỡ, anh còn muốn có em trong những ngày bình thường. Cùng chăm một khu vườn nhỏ, cùng lớn lên, cùng thương nhau thêm một chút, mỗi ngày.'}
-  ],
-  letter: [
-    'Anh nghĩ, có những cuộc gặp khi vừa xảy ra, mình chưa biết rằng sau này sẽ trở thành một điều quan trọng đến thế. Rồi một ngày nhìn lại, anh nhận ra: từ ngày gặp em, thế giới của anh đã có thêm một người để nhớ, một nơi để lòng mình hướng về.',
-    'Anh làm khu vườn này vì muốn tặng em một điều có thể nở hoa mỗi khi em ghé lại. Một chút màu hồng cho những ngày vui, một chút ánh trăng cho những buổi tối, và thật nhiều dịu dàng cho cả những hôm em thấy mệt. Anh mong em sẽ luôn tìm được một góc nhỏ để mỉm cười ở đây.',
-    'Cảm ơn em vì đã có mặt trong cuộc đời anh. Vì những câu chuyện, những bức ảnh, những khoảnh khắc bình thường mà khi có em bên cạnh, anh lại muốn giữ thật lâu. Anh thương không chỉ những lúc em rạng rỡ, mà cả những lúc em cần một người ngồi xuống, lắng nghe và ở bên.',
-    'Anh không hứa rằng mọi ngày phía trước đều sẽ dễ dàng. Nhưng anh muốn mình luôn biết quay về nói chuyện với nhau, lắng nghe nhau, và chăm chút cho tình yêu này như cách người ta chăm một khu vườn: kiên nhẫn, chân thành, bằng những điều nhỏ mỗi ngày.',
-    'Nếu có thể trở lại ngày đầu tiên mình gặp nhau, anh vẫn muốn bước về phía em. Và nếu được ước một điều cho những mùa hoa sau, anh sẽ ước chúng mình vẫn ở đây — vẫn có nhau, vẫn biết thương nhau, vẫn thấy lòng mình ấm lên khi gọi tên người kia.',
-    'Kỷ niệm ngày mình gặp nhau, anh tặng em khu vườn này. Còn phần yêu thương nhiều hơn thế, anh muốn dành cả những ngày sau để em cảm nhận. Vợ Cún yêu, mình cùng đi tiếp nhé. ♡'
-  ]
+ firstMet:'2025-10-18',
+ song:{title:'Phép Màu',artist:'MAYDAYs ft. Minh Tốc',youtubeId:'HhcTaxixdSI'},
+ letterTitle:'Gửi Vợ Cún yêu của anh,',
+ letter:[
+ 'Có những cuộc gặp gỡ mà mãi đến sau này, khi ngoảnh đầu nhìn lại, người ta mới nhận ra đó chính là khoảnh khắc cuộc đời mình bắt đầu rẽ sang một hướng khác. Với anh, đó là ngày chúng mình gặp nhau lần đầu ở Phúc Long. Anh vẫn nhớ cảm giác hôm ấy, khi một người vốn chẳng giỏi bắt chuyện, càng không dễ mở lòng với người lạ như anh, lại có thể ngồi cùng em và kể hết câu chuyện này đến câu chuyện khác một cách tự nhiên đến lạ. Anh không cần cố gắng trở nên thú vị, cũng chẳng phải tìm kiếm điều gì để nói. Mọi thứ cứ nhẹ nhàng như thể chúng mình đã quen nhau từ rất lâu. Có lẽ ngay từ giây phút ấy, em đã là một người đặc biệt với anh, chỉ là khi đó anh chưa kịp nhận ra.',
+ 'Vậy mà đã một năm rồi, em nhỉ? Một năm kể từ cuộc gặp tưởng chừng bình thường ấy, cô gái ngồi đối diện anh ngày hôm đó giờ đã trở thành người anh gọi bằng hai tiếng thân thương nhất: vợ anh. Đôi khi anh vẫn thấy thật kỳ diệu khi nghĩ rằng, giữa biết bao người trên thế giới, chúng mình lại tìm thấy nhau theo một cách giản dị đến vậy. Em đến, không ồn ào, không vội vã, nhưng từng chút một khiến cuộc sống của anh có thêm thật nhiều điều đáng để mong chờ. Những câu chuyện vụn vặt, những bức ảnh, những ngày bình thường được ở cạnh em, tất cả dần trở thành những ký ức mà anh muốn cất giữ thật lâu.',
+ 'Anh làm khu vườn nhỏ này tặng em, bởi anh muốn tình yêu của mình có một nơi để hiện diện, một nơi mà mỗi khi ghé lại, em đều có thể tìm thấy chút bình yên và dịu dàng anh dành cho em. Anh mong những bông hoa sẽ thay anh mang đến niềm vui trong những ngày em hạnh phúc, và cả một chút an ủi vào những hôm em thấy mỏi mệt. Anh biết mình không phải người hoàn hảo, cũng chẳng thể hứa rằng những ngày phía trước sẽ luôn ngập tràn nắng đẹp. Nhưng anh muốn cùng em chăm chút cho tình yêu này như cách người ta nâng niu một khu vườn, bằng sự kiên nhẫn, thấu hiểu và những điều nhỏ bé mỗi ngày. Bởi điều anh mong mỏi không chỉ là được yêu em trong những ngày tháng đẹp nhất, mà còn là được nắm tay em đi qua cả những ngày chẳng dễ dàng.',
+ 'Nếu có thể trở về Phúc Long của một năm trước, anh vẫn sẽ chọn ngồi xuống trước mặt em, vẫn muốn nghe em nói, muốn kể em nghe thật nhiều điều, và để mọi thứ bắt đầu một cách tự nhiên như ngày ấy. Chỉ khác rằng, bây giờ anh đã biết cô gái trước mặt mình sẽ trở thành một phần quý giá đến nhường nào trong cuộc đời anh. Một năm không phải quãng thời gian quá dài, nhưng đủ để anh hiểu rằng điều đẹp nhất của tình yêu không nằm ở những rung động thuở ban đầu, mà là sau tất cả, mình vẫn muốn lựa chọn cùng một người cho những năm tháng về sau.',
+ 'Cảm ơn em vì đã đến, đã ở lại và cùng anh viết nên câu chuyện của chúng mình. Chúc mừng kỷ niệm một năm ngày đầu gặp nhau, Vợ Cún yêu. Anh không biết những mùa hoa sau sẽ mang đến điều gì, chỉ mong dù thời gian có trôi bao lâu, chúng mình vẫn có thể ngồi cạnh nhau, kể cho nhau nghe những câu chuyện không đầu không cuối, thoải mái và bình yên như buổi chiều đầu tiên ấy.',
+ 'Ngày đó, anh không biết mình sẽ yêu em nhiều đến thế. Còn bây giờ, anh chỉ mong những năm tháng sau này, người được anh thương vẫn luôn là em.'
+ ]
 };

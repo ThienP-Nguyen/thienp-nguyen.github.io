@@ -4,10 +4,11 @@
   const TAU=Math.PI*2;
   const back=document.getElementById('landscape'),front=document.getElementById('blooms');
   const b=back.getContext('2d'),c=front.getContext('2d');
-  const section=document.getElementById('garden');
+  let section=document.getElementById('garden');
+  const artwork=back.parentElement;
   let W=1600,H=1000,dpr=1,scale=1,motion=!matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let mode='dusk',raf=0,last=0,visible=true,plants=[],newPlants=[],flies=[],stars=[],puffs=[];
-  const species=['rose','tulip','daisy','lavender','cosmos'];
+  let mode='dusk',raf=0,last=0,visible=true,plants=[],newPlants=[],flies=[],stars=[],puffs=[],forest=false,awakening=1;
+  const species=['rose','tulip','peony','dahlia','daisy','lavender','camellia','hydrangea','ranunculus','forgetmenot','sunflower','lilac'];
   let seed=78;
   const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
   const range=(a,z)=>a+random()*(z-a);
@@ -47,6 +48,7 @@
   }
   const sprites=new Map();
   function plantSprite(type,variant=0){
+    if(window.Botanica)return window.Botanica.sprite(type);
     const key=type+variant;if(sprites.has(key))return sprites.get(key);
     const cv=document.createElement('canvas');cv.width=240;cv.height=350;const x=cv.getContext('2d');
     x.scale(2,2);x.translate(60,170);
@@ -136,14 +138,15 @@
     ctx.fillStyle='#e1a7b2';ctx.font='14px Georgia';ctx.textAlign='center';ctx.fillText('♡',3,-67);ctx.restore();
   }
   function setupPlants(){
-    seed=667;plants=[];const count=W<700?65:135;
+    seed=667;plants=[];const count=forest?(W<700?145:240):(W<700?85:160);
     for(let i=0;i<count;i++){
       const xn=random(),center=Math.abs(xn-.5)*2;
       let y=H*(.94+random()*.19),height=range(135,265)*(0.7+center*.45);
       if(xn>.35&&xn<.65){height*=.65;y+=30;}
       if(i<20){y=H*range(.8,.92);height=range(50,100);}
       if(xn>.37&&xn<.63){y=Math.max(y,H*1.01);height=Math.min(height,H*.15);}
-      plants.push({x:xn*W,y,height,type:species[i%5],variant:i%3,phase:range(0,TAU),depth:y});
+      if(forest&&i<count*.65){y=H*range(.67,.98);height=range(55,145)*(y/H);if(xn>.4&&xn<.6)y+=H*.2;}
+      plants.push({x:xn*W,y,height,type:species[i%species.length],variant:i%3,phase:range(0,TAU),depth:y});
     }
     plants.sort((a,z)=>a.depth-z.depth);
     flies=Array.from({length:W<700?22:44},()=>({x:range(0,W),y:range(H*.57,H*.95),r:range(.7,1.8),phase:range(0,TAU),speed:range(.2,.9)}));
@@ -156,7 +159,7 @@
     c.save();c.globalAlpha=.65;
     for(let i=0;i<30;i++){const xx=(i/30)*W,y=H*.75+Math.sin(i*2.3)*20;c.save();c.translate(xx,y);flowerHead(c,species[i%5],.1,i%3);c.restore();}c.restore();
     // The main flowers sway from their roots; their detailed petals are cached sprites.
-    for(const p of plants){c.save();c.translate(p.x,p.y);c.rotate(Math.sin(tt*.65+p.phase)*.022*(motion?1:0));let h=p.height,s=h/350;c.globalAlpha=mode==='night'?.87:.99;c.drawImage(plantSprite(p.type,p.variant),-120*s,-h,240*s,h);c.restore();}
+    for(const p of plants){const grow=Math.max(0,Math.min(1,(awakening-p.phase/TAU*.4)/.6));if(!grow)continue;c.save();c.translate(p.x,p.y);c.scale(grow,grow);c.rotate(Math.sin(tt*.65+p.phase)*.022*(motion?1:0));let h=p.height,s=h/350;c.globalAlpha=(mode==='night'?.91:.99)*grow;c.drawImage(plantSprite(p.type,p.variant),-120*s,-h,240*s,h);c.restore();}
     const now=performance.now();
     for(const p of newPlants){let progress=motion?Math.min(1,(now-p.birth)/900):1;let e=1-Math.pow(1-progress,3);c.save();c.translate(p.x,p.y);c.scale(e,e);c.rotate(Math.sin(tt+p.phase)*.025*(motion?1:0));c.drawImage(plantSprite(p.type,p.variant),-p.height*120/350,-p.height,p.height*240/350,p.height);c.restore();}
     // Fireflies, floating pollen and twinkling stars.
@@ -176,16 +179,18 @@
   function loop(t){raf=0;if(!visible||!motion||document.hidden)return;if(t-last>32){render(t);last=t;}raf=requestAnimationFrame(loop);}
   function start(){if(motion&&visible&&!document.hidden&&!raf)raf=requestAnimationFrame(loop);}
   function stop(){cancelAnimationFrame(raf);raf=0;}
-  function resize(){const rect=section.getBoundingClientRect();H=1000;W=H*rect.width/rect.height;dpr=Math.min(devicePixelRatio||1,1.75);scale=rect.height/H;
+  function resize(){const rect=section.getBoundingClientRect();if(!rect.width||!rect.height)return;H=1000;W=H*rect.width/rect.height;dpr=Math.min(devicePixelRatio||1,1.75);scale=rect.height/H;
     for(const cv of [back,front]){cv.width=Math.round(rect.width*dpr);cv.height=Math.round(rect.height*dpr);cv.getContext('2d').setTransform(scale*dpr,0,0,scale*dpr,0,0);}
     newPlants=[];setupPlants();landscape();render(performance.now());start();
   }
   let resizeTimer;addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(resize,180);},{passive:true});
   document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else start();});
-  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)start();else stop();},{rootMargin:'100px'}).observe(section);
+  const visibilityObserver=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)start();else stop();},{rootMargin:'100px'});visibilityObserver.observe(section);
   window.Garden={
     setTime(value){mode=value;landscape();render(performance.now());},
     setMotion(value){motion=value;if(value)start();else{stop();render();}},
+    setAwakening(value){awakening=Math.max(0,Math.min(1,value));if(!motion)render();},
+    moveTo(host,kind='home'){visibilityObserver.disconnect();section=host;forest=kind==='forest';host.prepend(artwork);awakening=1;visible=true;resize();visibilityObserver.observe(section);},
     bloom(clientX,clientY){const r=section.getBoundingClientRect();let x=(clientX-r.left)/scale,y=(clientY-r.top)/scale;if(!Number.isFinite(x)||!Number.isFinite(y)){x=W*.3;y=H*.9;}y=Math.max(H*.77,Math.min(H*.98,y+65));newPlants.push({x,y,type:species[Math.floor(Math.random()*5)],variant:Math.floor(Math.random()*3),height:145+Math.random()*55,phase:Math.random()*TAU,birth:performance.now()});if(newPlants.length>35)newPlants.shift();render(performance.now());start();},
     drawSpecimen,
     get plantedCount(){return newPlants.length;},

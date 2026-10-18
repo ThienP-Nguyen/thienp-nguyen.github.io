@@ -6,6 +6,14 @@ Website: https://thienp-nguyen.github.io/vuon-hoa-cua-em/
 
 ## Trải nghiệm
 
+### Bản kỷ niệm có mở màn
+
+Màn đêm → những đốm sáng → rừng hoa nở → chữ hiện dần → nút **Nắm tay anh nhé**. Không tự chuyển sang trang chủ hoặc chương kế tiếp. Nút **Đi dạo cùng anh nhé** mở rừng hoa riêng, rồi người xem chủ động chọn các chương kỷ niệm, lá thư và đèn ước. Có bỏ qua và xem lại mở màn; thiết lập giảm chuyển động được tôn trọng.
+
+Rừng hoa có **30 loài**. Mỗi loài có tranh Canvas riêng, ý nghĩa có nguồn tham khảo, và một lời thương viết riêng. Sổ hoa hỗ trợ tìm tên không dấu, lọc theo cảm xúc, theo dõi các lời đã đọc trong lượt xem. Đây là tuyển chọn tiêu biểu, không khẳng định bao gồm mọi loài hoa hay một ý nghĩa duy nhất cho mọi nền văn hóa.
+
+Thư trong `noidung.js` được thay bằng nguyên văn nội dung chủ website cung cấp, với câu chuyện Phúc Long. Dữ liệu hoa và nguồn nằm trong `flowers.js`; tranh ở `botanica.js`; mở màn ở `intro.js`; trình tự chương ở `app.js`, `journey.css`.
+
 - Khu vườn 2D được vẽ bằng Canvas: hoa hồng, tulip, cúc, lavender, sao nhái, đôi cún, bướm, ngôi nhà nhỏ và đèn treo.
 - Chạng vạng / ánh trăng, hoa đung đưa, đom đóm, sao nhấp nháy, cánh hoa bay.
 - Chạm vào bãi cỏ hoặc nhấn Enter trên vùng gieo hoa để trồng thêm hoa.
@@ -16,7 +24,7 @@ Website: https://thienp-nguyen.github.io/vuon-hoa-cua-em/
 
 ## Sửa nội dung
 
-Sửa `noidung.js` để đổi ngày gặp (`firstMet`, định dạng YYYY-MM-DD), `flowerNotes`, `letter` hoặc bài hát (`song.youtubeId`). Không sử dụng lời bài hát trong nội dung thư.
+Sửa `noidung.js` để đổi ngày gặp (`firstMet`, định dạng YYYY-MM-DD), `letter` hoặc bài hát (`song.youtubeId`). Sửa `flowers.js` để đổi nội dung hoa. Không sử dụng lời bài hát trong nội dung thư.
 
 Ảnh và font italic dùng lại các tệp sẵn có trong `../sinh-nhat-minh-han/assets/`. Giữ thư mục đó để ảnh và font tiếp tục hoạt động. Các font Google có font hệ thống dự phòng. Không có framework, bước build hoặc thư viện JavaScript ngoài.
 

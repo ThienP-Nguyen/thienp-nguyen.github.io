@@ -16,12 +16,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Italiana&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="noidung.js" defer></script>
-  <script src="garden.js" defer></script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="journey.css?v=2">
+  <script src="noidung.js?v=2" defer></script>
+  <script src="flowers.js?v=2" defer></script>
+  <script src="botanica.js?v=2" defer></script>
+  <script src="garden.js?v=2" defer></script>
+  <script src="app.js?v=2" defer></script>
+  <script src="intro.js?v=2" defer></script>
 </head>
-<body>
+<body data-screen="intro">
 <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
   <symbol id="i-flower" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 12C4-4 0 15 12 16C-4 28 15 32 16 20C28 36 32 17 20 16C36 4 17 0 16 12Z"/><circle cx="16" cy="16" r="3"/></g></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S2 14 2 7.5C2 2 9 1 12 6c3-5 10-4 10 1.5C22 14 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
@@ -29,13 +33,20 @@
   <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-3v13M9 9l11-3" fill="none" stroke="currentColor" stroke-width="1.4"/><ellipse cx="6" cy="18" rx="3" ry="2" fill="none" stroke="currentColor" stroke-width="1.4"/><ellipse cx="17" cy="15" rx="3" ry="2" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
 </defs></svg>
-<a class="skip" href="#flowers">Đến những bông hoa</a>
-<header class="site-header">
+<section class="cinematic-intro" id="intro" aria-label="Lời mở đầu dành riêng cho Minh Hân">
+ <div class="intro-darkness" id="introDarkness"></div><canvas id="introLights" aria-hidden="true"></canvas>
+ <span class="intro-corner">MỘT CÂU CHUYỆN CỦA CHÚNG MÌNH</span>
+ <button class="intro-skip" id="introSkip" type="button">Đến khu vườn <span>↗</span></button>
+ <div class="intro-story"><span class="intro-date" id="introDate">18 . 10 . 2025 · PHÚC LONG</span><p id="introWords" aria-hidden="true"></p><p class="sr-only" id="introAccessible" aria-live="polite"></p><div class="intro-line" aria-hidden="true"></div><button class="primary-button intro-enter" id="introEnter" type="button" hidden>Nắm tay anh nhé <span>→</span></button></div>
+ <span class="intro-bottom">Từ Chó Béo, gửi Vợ Cún yêu ♡</span>
+</section>
+<a class="skip" href="#forest" data-go="forest">Đến rừng hoa</a>
+<header class="site-header" inert>
   <a class="brand" href="#garden" aria-label="Về khu vườn"><svg><use href="#i-flower"/></svg><span>khu vườn của em<small>THIỆN & MINH HÂN</small></span></a>
-  <nav aria-label="Đi dạo trong vườn"><a href="#flowers">Những bông hoa</a><a href="#memories">Chúng mình</a><a href="#letter">Lá thư cho em <span>↗</span></a></nav>
+  <nav aria-label="Đi dạo trong vườn"><a href="#forest" data-go="forest">Rừng hoa</a><a href="#memories" data-go="memories">Chúng mình</a><a href="#letter" data-go="letter">Lá thư cho em <span>↗</span></a></nav>
   <button class="sound-button" id="soundToggle" type="button" aria-pressed="false"><svg><use href="#i-music"/></svg><span>Bật nhạc</span><i class="sound-bars" aria-hidden="true"><b></b><b></b><b></b></i></button>
 </header>
-<main>
+<main id="experience" inert>
   <section class="hero" id="garden" aria-label="Khu vườn cổ tích dành cho Minh Hân">
     <div class="garden-art" aria-hidden="true"><canvas id="landscape"></canvas><canvas id="blooms"></canvas></div>
     <div class="hero-shade"></div>
@@ -43,7 +54,7 @@
       <div class="eyebrow"><span></span> KỶ NIỆM NGÀY ĐẦU TIÊN MÌNH GẶP NHAU <span></span></div>
       <h1>Từ ngày gặp em,<br>thế giới anh <em>nở hoa.</em></h1>
       <p>Anh dành cả khu vườn này cho em.<br>Và tất cả dịu dàng trong anh, cũng vậy.</p>
-      <a class="primary-button" href="#flowers"><svg><use href="#i-flower"/></svg> Đi dạo cùng anh nhé <span>↓</span></a>
+      <a class="primary-button" href="#forest" data-go="forest"><svg><use href="#i-flower"/></svg> Đi dạo cùng anh nhé <span>→</span></a>
       <div class="dedication">Dành riêng cho <strong>Minh Hân</strong> <svg><use href="#i-heart"/></svg></div>
     </div>
     <button class="rabbit-note" id="rabbitNote" type="button" aria-label="Lời nhắn của Vợ Cún và Chó Béo"><span>Vợ Cún & Chó Béo, bên nhau nhé ♡</span></button>
@@ -53,7 +64,19 @@
       <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="true">✧ <span>Hiệu ứng bật</span></button>
     </div>
     <button class="plant-surface" id="plantSurface" type="button" aria-label="Gieo thêm một bông hoa trong vườn. Bạn cũng có thể nhấn Enter."></button>
-    <span class="edge-label">A LITTLE GARDEN. AN ENDLESS LOVE.</span>
+    <button class="replay-button" id="replayIntro" type="button">↺ Xem lại lời mở đầu</button>
+    <span class="edge-label">MỘT KHU VƯỜN. MỘT NGƯỜI THƯƠNG.</span>
+  </section>
+
+  <section class="forest-section" id="forest" aria-label="Rừng hoa của Vợ Cún" hidden>
+   <div class="forest-viewport" id="forestViewport">
+    <div class="forest-shade" aria-hidden="true"></div>
+    <div class="forest-heading"><span class="eyebrow">CHƯƠNG 02 · MỖI BÔNG HOA LÀ MỘT LỜI YÊU</span><h2>Một khu rừng hoa,<br><em>chỉ thương mình em.</em></h2><p>Em chạm vào một bông hoa nhé.<br>Có một điều anh muốn kể, đang đợi bên trong.</p></div>
+    <div class="flower-hotspots" id="flowerHotspots" aria-label="Chọn một bông hoa trong rừng"></div>
+    <div class="forest-tools"><button class="glass-button" id="catalogToggle" type="button"><svg><use href="#i-flower"/></svg> Sổ 30 loài hoa <span id="flowerProgress">0 / 30</span></button><button class="glass-button" id="nextBed" type="button">Luống hoa khác ↻</button></div>
+    <span class="forest-read-note" id="forestReadNote" role="status" aria-live="polite">Mỗi loài hoa, một ý nghĩa. Mỗi lời thương, dành cho Cún.</span>
+   </div>
+   <div class="chapter-next"><button class="text-button" data-go="home" type="button">← Về khu vườn</button><p>Hoa còn rất nhiều.<br>Anh còn một câu chuyện muốn kể.</p><button class="primary-button" data-go="memories" type="button">Xem những ngày có nhau <span>→</span></button></div>
   </section>
 
   <section class="flowers-section" id="flowers">
@@ -79,6 +102,7 @@
     </div>
     <div class="together-date reveal" id="togetherDate" hidden><svg><use href="#i-heart"/></svg><p>Từ <strong id="firstDate"></strong>, mình đã có <strong id="daysTogether"></strong> ngày để thương nhau.</p></div>
     <div class="handwritten-note reveal">Nếu được quay lại ngày đầu gặp nhau,<br>anh vẫn muốn đi về phía em.</div>
+    <div class="chapter-next"><button class="text-button" data-go="forest" type="button">← Quay lại rừng hoa</button><p>Từ buổi chiều ở Phúc Long,<br>đến một người anh gọi là vợ.</p><button class="primary-button" data-go="letter" type="button">Anh có lời muốn nói <span>→</span></button></div>
   </section>
 
   <section class="letter-section" id="letter">
@@ -86,12 +110,14 @@
     <div class="section-heading reveal"><span class="eyebrow">Ở MỘT GÓC NHỎ TRONG VƯỜN</span><h2>Anh có một lá thư.<br><em>Chỉ dành cho em.</em></h2><p>Có những lời, anh muốn em được đọc thật chậm.</p></div>
     <button class="envelope reveal" id="openLetter" type="button" aria-label="Mở lá thư gửi Vợ Cún yêu"><span class="envelope-back"></span><span class="envelope-paper">Gửi Vợ Cún yêu ♡</span><span class="envelope-front"></span><span class="envelope-flap"></span><span class="wax-seal">♡</span><span class="envelope-sprig">✿</span></button>
     <p class="envelope-hint">Chạm vào dấu tim để mở thư <span>↗</span></p>
+    <div class="chapter-next"><button class="text-button" data-go="memories" type="button">← Những ngày có nhau</button><p>Đọc xong rồi,<br>mình cùng ước một điều nhé.</p><button class="primary-button" data-go="wish" type="button">Cùng anh thả đèn ước <span>→</span></button></div>
   </section>
 
-  <section class="wish-section" id="wish"><div class="wish-stars" aria-hidden="true">✧ <span>·</span> ✦ <span>·</span> ✧</div><span class="eyebrow">MỘT ĐIỀU ƯỚC CHO CHÚNG MÌNH</span><h2>Mong mọi mùa hoa sau,<br><em>mình vẫn có nhau.</em></h2><p>Thả một chiếc đèn nhỏ, gửi một điều thật dịu dàng lên trời.</p><button class="primary-button" id="openWish" type="button"><svg><use href="#i-sparkle"/></svg> Thả đèn ước <span>↗</span></button><div class="lantern-sky" id="lanternSky" aria-hidden="true"></div></section>
+  <section class="wish-section" id="wish"><div class="wish-stars" aria-hidden="true">✧ <span>·</span> ✦ <span>·</span> ✧</div><span class="eyebrow">CHƯƠNG CUỐI · NHỮNG MÙA HOA SAU</span><h2>Mong mọi mùa hoa sau,<br><em>mình vẫn có nhau.</em></h2><p>Thả một chiếc đèn nhỏ, gửi một điều thật dịu dàng lên trời.</p><button class="primary-button" id="openWish" type="button"><svg><use href="#i-sparkle"/></svg> Thả đèn ước <span>↗</span></button><button class="wish-return" data-go="forest" type="button">Mình trở lại rừng hoa nhé ♡</button><div class="lantern-sky" id="lanternSky" aria-hidden="true"></div></section>
 </main>
 <footer><a class="footer-brand" href="#garden"><svg><use href="#i-flower"/></svg> Từ Chó Béo, với tất cả thương yêu.</a><p>Khu vườn này là của em. Hôm nay, và cả những ngày sau.</p><a class="back-top" href="#garden" aria-label="Về khu vườn">↑</a></footer>
-<dialog id="flowerDialog" class="flower-dialog" aria-labelledby="flowerTitle"><button class="dialog-close" data-close="flowerDialog" aria-label="Đóng lời nhắn">×</button><canvas id="noteFlower" width="220" height="280" aria-hidden="true"></canvas><span class="eyebrow" id="flowerKicker"></span><h2 id="flowerTitle"></h2><p id="flowerMessage"></p><button class="text-button" id="nextFlower" type="button">Đọc một lời thương nữa <span>→</span></button><span class="dialog-signature">Chó Béo của em ♡</span></dialog>
+<dialog id="catalogDialog" class="catalog-dialog" aria-labelledby="catalogTitle"><div class="catalog-header"><div><span class="eyebrow">BÁCH HOA · NHỮNG LỜI CHƯA NÓI HẾT</span><h2 id="catalogTitle">Ba mươi bông hoa.<br><em>Ba mươi cách thương em.</em></h2></div><button class="dialog-close" data-close="catalogDialog" aria-label="Đóng sổ hoa">×</button></div><label class="flower-search"><svg><use href="#i-flower"/></svg><input id="flowerSearch" type="search" placeholder="Em muốn tìm loài hoa nào?" aria-label="Tìm tên loài hoa"></label><div class="flower-filters" id="flowerFilters" role="group" aria-label="Chọn ý nghĩa hoa"><button type="button" data-filter="all" aria-pressed="true">Tất cả</button><button type="button" data-filter="say-dam" aria-pressed="false">Say đắm</button><button type="button" data-filter="gan-bo" aria-pressed="false">Gắn bó</button><button type="button" data-filter="nho-thuong" aria-pressed="false">Nhớ thương</button><button type="button" data-filter="binh-yen" aria-pressed="false">Bình yên</button></div><p class="catalog-context">Hoa có nhiều cách kể chuyện theo màu sắc và văn hóa. Anh chọn những ý nghĩa dịu dàng để gửi em.</p><div class="catalog-grid" id="catalogGrid"></div><p id="noFlowers" hidden>Chưa tìm thấy bông hoa này. Em thử tên khác nhé.</p><details class="flower-context"><summary>Một chút về ngôn ngữ hoa</summary><p>Đây là 30 loài hoa tiêu biểu cho tình yêu, gắn bó, nhớ thương và bình yên; không phải danh mục mọi loài hoa trên thế giới. Ý nghĩa được chọn từ ngôn ngữ hoa phương Tây và cách tặng hoa hiện đại, có thể khác giữa các truyền thống. Trong từng bông hoa, phần ý nghĩa có nguồn tham khảo; phần lời thương là những dòng Chó Béo dành riêng cho Cún.</p></details></dialog>
+<dialog id="flowerDialog" class="flower-dialog botanical-dialog" aria-labelledby="flowerTitle"><button class="dialog-close" data-close="flowerDialog" aria-label="Trở lại rừng hoa">×</button><div class="botanical-art"><span class="botanical-index" id="flowerIndex"></span><canvas id="noteFlower" width="420" height="560" aria-hidden="true"></canvas><h3 id="flowerName"></h3><i id="flowerLatin"></i><span class="botanical-stamp">GỬI VỢ CÚN ♡</span></div><article class="botanical-copy"><span class="eyebrow" id="flowerKicker"></span><p class="flower-meaning" id="flowerMeaning"></p><h2 id="flowerTitle"></h2><p id="flowerMessage"></p><span class="dialog-signature">Chó Béo của em ♡</span><details class="meaning-source"><summary>Ý nghĩa của bông hoa này</summary><p id="meaningContext"></p><a id="meaningSource" href="#" target="_blank" rel="noopener noreferrer"></a></details><div class="flower-dialog-controls"><button class="text-button" id="prevFlower" type="button" aria-label="Bông hoa trước">←</button><span id="flowerPage"></span><button class="text-button" id="nextFlower" type="button">Lời thương tiếp <span>→</span></button></div><button class="back-to-book" id="backToBook" type="button">Mở lại sổ 30 loài hoa</button></article></dialog>
 <dialog id="letterDialog" class="letter-dialog" aria-labelledby="letterTitle"><button class="dialog-close" data-close="letterDialog" aria-label="Đóng thư">×</button><article><span class="eyebrow">MỘT LÁ THƯ TỪ TRÁI TIM</span><h2 id="letterTitle">Gửi Vợ Cún yêu,</h2><div id="letterContent"></div><p class="letter-sign">Thương em, thật nhiều.<br><strong>Chó Béo của em ♡</strong></p><div class="letter-bottom"><svg><use href="#i-flower"/></svg><span>Hôm nay. Ngày mai. Và rất lâu về sau.</span><svg><use href="#i-flower"/></svg></div></article></dialog>
 <dialog id="photoDialog" class="photo-dialog" aria-label="Ảnh của chúng mình"><button class="dialog-close" data-close="photoDialog" aria-label="Đóng ảnh">×</button><img id="photoLarge" alt=""><div class="photo-controls"><button id="prevPhoto" aria-label="Ảnh trước" type="button">←</button><span id="photoCaption"></span><button id="nextPhoto" aria-label="Ảnh sau" type="button">→</button></div></dialog>
 <dialog id="wishDialog" class="wish-dialog" aria-labelledby="wishTitle"><button class="dialog-close" data-close="wishDialog" aria-label="Đóng điều ước">×</button><span class="wish-icon" aria-hidden="true">✧</span><span class="eyebrow">ĐỂ BẦU TRỜI GIỮ HỘ MÌNH</span><h2 id="wishTitle">Em ước điều gì?</h2><p>Một điều nhỏ thôi, dành cho hai đứa.</p><form id="wishForm"><label class="sr-only" for="wishInput">Điều ước của em</label><textarea id="wishInput" maxlength="180" rows="3" placeholder="Mong chúng mình luôn…" required></textarea><button class="primary-button" type="submit">Gửi lên những vì sao <span>↗</span></button></form></dialog>
