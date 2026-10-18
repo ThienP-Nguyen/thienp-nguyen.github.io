@@ -49,7 +49,7 @@
  });
  function updateRead(){
   $('flowerProgress').textContent=read.size+' / '+flowers.length;
-  $('forestReadNote').textContent=read.size?'Em đã nhận '+read.size+' lời thương. Còn nhiều bông hoa đang chờ em.':'Mỗi loài hoa, một ý nghĩa. Mỗi lời thương, dành cho Cún.';
+  $('forestReadNote').textContent=read.size===flowers.length?'Em đã nhận đủ 30 lời thương. Bông nào anh cũng dành cho em. ♡':read.size?'Em đã nhận '+read.size+' lời thương. Còn nhiều bông hoa đang chờ em.':'Mỗi loài hoa, một ý nghĩa. Mỗi lời thương, dành cho Cún.';
   document.querySelectorAll('[data-flower-index]').forEach(e=>{const seen=read.has(Number(e.dataset.flowerIndex));e.classList.toggle('seen',seen);e.querySelector('.seen-dot')?.toggleAttribute('hidden',!seen);});
  }
  function showFlower(index){
