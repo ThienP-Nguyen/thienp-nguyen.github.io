@@ -1,0 +1,15 @@
+/* Identity and content adjustments; the original design and animations are retained. */
+[hidden]{display:none!important}
+.brand span{white-space:nowrap}
+.profile-copy h1{font-size:clamp(38px,4.7vw,60px)}
+.research-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.research-card h3{min-height:0}
+.pub-group-heading{margin:0 0 18px;font-size:20px;font-weight:700;color:var(--text)}
+.profile-identifiers{display:grid;gap:12px;padding-top:6px}
+.profile-identifiers p{font-size:12px;color:var(--muted);line-height:1.8;margin:8px 0 0}
+.profile-identifiers a{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:650;color:var(--blue)}
+.profile-identifiers img{width:22px;height:22px;object-fit:contain}
+.modern-card .pub-side:empty{display:none}
+@media(max-width:900px){.theme-toggle{margin-left:auto}.nav-container{gap:13px}.brand span{font-size:12px}}
+@media(max-width:700px){.mobile-nav.open{top:64px}.research-grid{grid-template-columns:1fr}.profile-copy h1{font-size:39px}}
+@media(max-width:380px){.nav-container{gap:9px}.brand span{font-size:11px}}

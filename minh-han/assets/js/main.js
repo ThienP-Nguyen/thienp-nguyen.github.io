@@ -1,52 +1,49 @@
-const themeToggle = document.querySelector('.theme-toggle');
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
-const themeKey = 'minh-han-site-theme';
-function applyTheme(theme) {
-  document.body.classList.toggle('dark-mode', theme === 'dark');
-  const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-  themeToggle?.setAttribute('aria-label', label);
-  themeToggle?.setAttribute('title', label);
+const themeToggle=document.querySelector('.theme-toggle');
+const menuToggle=document.querySelector('.menu-toggle');
+const mobileNav=document.querySelector('.mobile-nav');
+const THEME_KEY='minh-han-site-theme';
+
+function applyTheme(theme){
+  document.body.classList.toggle('dark-mode',theme==='dark');
+  if(themeToggle){
+    themeToggle.setAttribute('aria-label',theme==='dark'?'Switch to light mode':'Switch to dark mode');
+    themeToggle.setAttribute('title',theme==='dark'?'Switch to light mode':'Switch to dark mode');
+  }
 }
-let savedTheme;
-try { savedTheme = localStorage.getItem(themeKey); } catch {}
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
-themeToggle?.addEventListener('click', () => {
-  const next = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
-  try { localStorage.setItem(themeKey, next); } catch {}
+const savedTheme=localStorage.getItem(THEME_KEY);
+const prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+applyTheme(savedTheme||(prefersDark?'dark':'light'));
+
+themeToggle?.addEventListener('click',()=>{
+  const next=document.body.classList.contains('dark-mode')?'light':'dark';
+  localStorage.setItem(THEME_KEY,next);
   applyTheme(next);
 });
-function closeMenu() {
-  mobileNav?.classList.remove('open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
-}
-menuToggle?.addEventListener('click', () => {
-  const open = mobileNav?.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(Boolean(open)));
+
+menuToggle?.addEventListener('click',()=>{
+  const open=mobileNav?.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded',String(Boolean(open)));
 });
-mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && mobileNav?.classList.contains('open')) {
-    closeMenu();
-    menuToggle?.focus();
-  }
-});
-const filters = document.querySelectorAll('.pub-filter');
-const papers = document.querySelectorAll('.pub-card');
-const groups = document.querySelectorAll('.pub-year-group');
-filters.forEach(button => button.addEventListener('click', () => {
-  const filter = button.dataset.filter;
-  filters.forEach(item => {
-    item.classList.toggle('active', item === button);
-    item.setAttribute('aria-pressed', String(item === button));
-  });
-  papers.forEach(paper => {
-    const type = paper.dataset.type;
-    paper.hidden = filter !== 'all' && filter !== type && !(filter === 'manuscript' && ['revision', 'preparation'].includes(type));
-  });
-  groups.forEach(group => {
-    group.hidden = ![...group.querySelectorAll('.pub-card')].some(paper => !paper.hidden);
-  });
+
+mobileNav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+  mobileNav.classList.remove('open');
+  menuToggle?.setAttribute('aria-expanded','false');
 }));
 
+// publication filters
+const pubFilterButtons=document.querySelectorAll('.pub-filter');
+const pubCards=document.querySelectorAll('.pub-card[data-type]');
+const pubYearGroups=document.querySelectorAll('.pub-year-group');
+if(pubFilterButtons.length&&pubCards.length){
+  pubFilterButtons.forEach(btn=>btn.addEventListener('click',()=>{
+    const filter=btn.dataset.filter;
+    pubFilterButtons.forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn));});
+    pubCards.forEach(card=>{
+      card.hidden=filter!=='all'&&card.dataset.type!==filter;
+    });
+    pubYearGroups.forEach(group=>{
+      const visible=[...group.querySelectorAll('.pub-card[data-type]')].some(card=>!card.hidden);
+      group.hidden=!visible;
+    });
+  }));
+}

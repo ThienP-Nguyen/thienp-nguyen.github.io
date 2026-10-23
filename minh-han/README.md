@@ -1,20 +1,7 @@
 # Do Hoang Minh Han — Academic Website
 
-Live website: https://thienp-nguyen.github.io/minh-han/
+Static academic website adapted directly from the original website provided by the user. The original stylesheets, navigation, social icons, RIS animation, hover effects, theme toggle, project filters, and figure gallery are retained.
 
-Independent static portfolio adapted from Thien P. Nguyen’s academic website. The existing root website is unchanged. This folder can also be deployed as the root of a separate GitHub Pages repository; update canonical URLs and sitemap for the new address.
+All biography text, academic milestones, project descriptions, and research output follow the supplied My_CV (6).pdf. The original owner’s portrait, project results, book contribution, research program, citation statistics, and unrelated content are excluded. Project figures are explanatory schematics based on the CV.
 
-## Content
-
-- `index.html`: biography, research interests, education, research experience, awards, and skills.
-- `projects.html`: all four selected projects from the CV, including the ongoing spectrum-sensing project.
-- `publications.html`: three published/accepted journal papers, one accepted conference paper, and two manuscripts with explicit status labels.
-- `assets/Minh-Han-CV.pdf`: the supplied CV, preserved as provided.
-
-Content source: My_CV (6).pdf supplied on 23 October 2026. Project diagrams are explanatory schematics derived from the CV, not measured performance results. The monogram is used because the supplied CV contains no portrait. No project measurements, repositories, demos, or publication DOIs have been invented.
-
-The original downloaded CV includes a placeholder website and malformed PDF email/website annotations; website navigation and contact links use the correct details independently.
-
-## Preview
-
-Run `python -m http.server 8765` in this folder and open http://localhost:8765/. No build tools or dependencies are required.
+No build step is needed. Enable GitHub Pages from the root of main. Before final deployment, update canonical URLs and sitemap to the allocated public origin.
